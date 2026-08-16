@@ -1,182 +1,706 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Verlag von Bedeutung — Axiomatica Universalis</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Lora', Georgia, serif; background: #f9f7f2; color: #1a1a1a; font-size: 16px; line-height: 1.7; }
-    .page { max-width: 720px; margin: 0 auto; padding: 2.5rem 2rem 4rem; background: white; min-height: 100vh; border-left: 0.5px solid #ddd; border-right: 0.5px solid #ddd; }
-    .lang-switch { text-align: right; margin-bottom: 0.8rem; }
-    .lang-switch a { font-family: 'Raleway', sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #888; text-decoration: none; margin-left: 1rem; border: 0.5px solid #ccc; padding: 0.3em 0.7em; }
-    .lang-switch a:hover { color: #1a1a1a; border-color: #1a1a1a; }
-    .lang-switch a.active { color: #1a1a1a; border-color: #1a1a1a; font-weight: 700; }
-    .meta-top { text-align: center; font-family: 'Raleway', sans-serif; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: #aaa; padding-bottom: 0.8rem; border-bottom: 0.5px solid #ccc; margin-bottom: 1rem; }
-    .hdr { text-align: center; border-bottom: 2px solid #1a1a1a; border-top: 2px solid #1a1a1a; padding: 0.8rem 0 0.6rem; margin-bottom: 0.5rem; }
-    .hdr-name { font-size: 2rem; font-weight: 700; letter-spacing: 0.04em; }
-    .hdr-sub { font-family: 'Raleway', sans-serif; font-size: 0.65rem; letter-spacing: 0.24em; color: #666; text-transform: uppercase; margin-top: 6px; font-weight: 300; }
-    .nav { text-align: center; font-family: 'Raleway', sans-serif; font-size: 0.6rem; letter-spacing: 0.14em; color: #aaa; text-transform: uppercase; padding: 0.5rem 0; border-bottom: 0.5px solid #ccc; margin-bottom: 1.2rem; line-height: 2; }
-    .neu-box { border: 1px solid #1a1a1a; padding: 1.2rem 1.4rem; margin-bottom: 1.2rem; }
-    .neu-label { font-family: 'Raleway', sans-serif; font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.4rem; }
-    .neu-band { font-family: 'Raleway', sans-serif; font-size: 0.65rem; color: #888; margin-bottom: 0.5rem; }
-    .neu-titel { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.8rem; line-height: 1.3; }
-    .neu-titel em { font-style: italic; font-weight: 400; }
-    .neu-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
-    @media (max-width: 560px) { .neu-cols { grid-template-columns: 1fr; } }
-    .neu-text { font-size: 0.9rem; line-height: 1.75; color: #333; text-align: justify; }
-    .neu-zitat-col { border-left: 2px solid #ccc; padding-left: 1rem; }
-    .neu-zitat { font-style: italic; font-size: 0.9rem; line-height: 1.75; color: #333; }
-    .divider-thick { border: none; border-top: 1.5px solid #1a1a1a; margin: 1.2rem 0; }
-    .reihe-intro { text-align: center; padding: 1rem 0 0.8rem; }
-    .reihe-label { font-family: 'Raleway', sans-serif; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #1a1a1a; margin-bottom: 0.6rem; }
-    .reihe-frage { font-size: 1.15rem; font-weight: 700; line-height: 1.5; margin-bottom: 0.4rem; }
-    .reihe-ant { font-family: 'Raleway', sans-serif; font-size: 1rem; font-weight: 700; color: #1a1a1a; }
-    .sek-hdr { display: flex; align-items: center; gap: 12px; margin: 1rem 0 0.8rem; }
-    .sek-hdr-line { flex: 1; height: 0.5px; background: #1a1a1a; }
-    .sek-hdr-ornament { font-family: 'Lora', serif; font-size: 0.8rem; font-style: italic; color: #888; white-space: nowrap; }
-    .band-row { display: grid; grid-template-columns: 52px 1fr 52px; gap: 8px; padding: 0.7rem 0; border-bottom: 0.5px solid #eee; align-items: start; }
-    .band-row:last-child { border-bottom: none; }
-    .band-nr { font-family: 'Raleway', sans-serif; font-size: 0.6rem; letter-spacing: 0.08em; text-transform: uppercase; color: #bbb; line-height: 1.6; padding-top: 3px; }
-    .band-name { font-size: 1rem; font-weight: 700; margin-bottom: 2px; }
-    .band-ut { font-size: 0.85rem; font-style: italic; color: #777; margin-bottom: 4px; }
-    .band-text { font-size: 0.82rem; line-height: 1.65; color: #555; text-align: justify; }
-    .band-meta { font-family: 'Raleway', sans-serif; font-size: 0.6rem; color: #bbb; text-align: right; line-height: 1.7; padding-top: 3px; }
-    .band-avail { font-size: 0.6rem; color: #888; font-style: italic; display: block; }
-    .methode-bar { text-align: center; border-top: 0.5px solid #ccc; border-bottom: 0.5px solid #ccc; padding: 0.7rem 0.8rem; margin: 1rem 0; }
-    .methode-text { font-style: italic; font-size: 0.88rem; line-height: 1.7; color: #555; }
-    .methode-sub { font-family: 'Raleway', sans-serif; font-size: 0.65rem; color: #aaa; margin-top: 4px; letter-spacing: 0.06em; }
-    .bottom-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1rem; border-top: 0.5px solid #ccc; padding-top: 1rem; }
-    @media (max-width: 560px) { .bottom-cols { grid-template-columns: 1fr; } }
-    .col-titel { font-family: 'Raleway', sans-serif; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 0.5rem; border-bottom: 0.5px solid #ddd; padding-bottom: 4px; }
-    .col-text { font-size: 0.82rem; line-height: 1.7; color: #444; margin-bottom: 0.3rem; }
-    .col-doi { font-size: 0.72rem; color: #aaa; margin-top: 0.5rem; font-style: italic; line-height: 1.6; }
-    .symbiose-bar { border-top: 0.5px solid #ccc; border-bottom: 0.5px solid #ccc; text-align: center; padding: 0.8rem 1rem; margin: 1rem 0; }
-    .symbiose-text { font-style: italic; font-size: 0.9rem; line-height: 1.7; color: #444; }
-    .symbiose-sub { font-family: 'Raleway', sans-serif; font-size: 0.62rem; color: #aaa; margin-top: 6px; letter-spacing: 0.06em; }
-    .qr-area { text-align: center; margin: 1rem 0 0.5rem; }
-    .qr-link { font-family: 'Raleway', sans-serif; font-size: 0.7rem; color: #888; display: block; margin-top: 6px; letter-spacing: 0.06em; }
-    .qr-link a { color: #888; text-decoration: none; }
-    .qr-link a:hover { text-decoration: underline; }
-    .footer { border-top: 2px solid #1a1a1a; margin-top: 1.2rem; padding-top: 0.8rem; text-align: center; }
-    .footer-name { font-family: 'Raleway', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 4px; }
-    .footer-adresse { font-family: 'Raleway', sans-serif; font-size: 0.6rem; color: #aaa; margin-bottom: 4px; }
-    .footer-formel { font-size: 1rem; font-style: italic; margin: 6px 0 4px; }
-    .footer-meta { font-family: 'Raleway', sans-serif; font-size: 0.6rem; color: #aaa; margin-bottom: 3px; }
-    .footer-mail { font-family: 'Raleway', sans-serif; font-size: 0.6rem; color: #aaa; margin-bottom: 3px; }
-    .footer-copy { font-family: 'Raleway', sans-serif; font-size: 0.55rem; color: #bbb; }
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="format-detection" content="telephone=no" />
+
+<title>Axiomatica Universalis — Karlo Beyer | Verlag von Bedeutung</title>
+<meta name="description" content="Axiomatica Universalis von Karlo Beyer: eine populärwissenschaftliche Buchreihe über eine universelle Theorie der Information, Fraktalität und Struktur — von Sprache und Bewusstsein bis zum kosmischen Netz. Spektraler Exponent und Fixpunkt β* = D/(D+1). Open Access." />
+<meta name="author" content="Karlo Beyer" />
+<meta name="keywords" content="Axiomatica Universalis, Karlo Beyer, Verlag von Bedeutung, spektraler Exponent, spectral exponent, Fraktalität, fractal, fractality, Fixpunkt beta star, universal information architecture, Informationstheorie, information theory, Komplexität, complexity, cosmic web, kosmisches Netz, Bewusstsein, consciousness, Universalica, Cosmologica, Populärwissenschaft, popular science, open access" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<link rel="canonical" href="https://symbiontart.github.io/verlag-von-bedeutung/" />
+
+
+<link rel="alternate" hreflang="de" href="https://symbiontart.github.io/verlag-von-bedeutung/" />
+<link rel="alternate" hreflang="en" href="https://symbiontart.github.io/verlag-von-bedeutung/en/" />
+<link rel="alternate" hreflang="x-default" href="https://symbiontart.github.io/verlag-von-bedeutung/" />
+
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Verlag von Bedeutung" />
+<meta property="og:locale" content="de_DE" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:title" content="Axiomatica Universalis — Eine Antwort. Sechs Bände." />
+<meta property="og:description" content="Was haben Sprache, Bewusstsein, biologische Netzwerke und der Kosmos gemeinsam? Die populärwissenschaftliche Buchreihe von Karlo Beyer über die universelle Struktur der Information." />
+<meta property="og:url" content="https://symbiontart.github.io/verlag-von-bedeutung/" />
+<meta property="og:image" content="https://symbiontart.github.io/verlag-von-bedeutung/og-image.jpg" />
+<meta property="og:image:alt" content="Axiomatica Universalis — Verlag von Bedeutung" />
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Axiomatica Universalis — Karlo Beyer" />
+<meta name="twitter:description" content="Eine universelle Theorie der Information, Fraktalität und Struktur — von Sprache und Bewusstsein bis zum kosmischen Netz. Open Access." />
+<meta name="twitter:image" content="https://symbiontart.github.io/verlag-von-bedeutung/og-image.jpg" />
+
+<!-- ============================================================
+     Schema.org — strukturierte Daten (Google + KI-Crawler)
+     ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://symbiontart.github.io/verlag-von-bedeutung/#publisher",
+      "name": "Verlag von Bedeutung",
+      "description": "Unabhängiger Wissenschaftsverlag in Zürich, Herausgeber der Reihe Axiomatica Universalis.",
+      "url": "https://symbiontart.github.io/verlag-von-bedeutung/",
+      "email": "verlag-von-bedeutung@mailbox.org",
+      "foundingDate": "2026",
+      "location": { "@type": "Place", "address": { "@type": "PostalAddress", "addressLocality": "Zürich", "addressCountry": "CH" } }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://symbiontart.github.io/verlag-von-bedeutung/#author",
+      "name": "Karlo Beyer",
+      "jobTitle": "Autor",
+      "nationality": "CH"
+    },
+    {
+      "@type": "BookSeries",
+      "@id": "https://symbiontart.github.io/verlag-von-bedeutung/#series",
+      "name": "Axiomatica Universalis",
+      "description": "Eine populärwissenschaftliche Buchreihe über eine universelle Theorie der Information, Fraktalität und Struktur — von Sprache und Bewusstsein über biologische Netzwerke bis zum kosmischen Netz.",
+      "author": { "@id": "https://symbiontart.github.io/verlag-von-bedeutung/#author" },
+      "publisher": { "@id": "https://symbiontart.github.io/verlag-von-bedeutung/#publisher" },
+      "inLanguage": ["de", "en"],
+      "keywords": "spektraler Exponent, Fraktalität, universal information architecture, Fixpunkt β*, cosmic web, Bewusstsein, Komplexität, Informationstheorie",
+      "hasPart": [
+        { "@type": "Book", "position": 1, "name": "Universalica", "alternativeHeadline": "Das Signal und die Lücke", "author": { "@id": "https://symbiontart.github.io/verlag-von-bedeutung/#author" }, "datePublished": "2026", "inLanguage": "de", "abstract": "Eine universelle Kommunikationsarchitektur für effiziente Signalübertragung — von biologischen bis zu kosmischen Netzwerken." },
+        { "@type": "Book", "position": 2, "name": "Empirica", "alternativeHeadline": "Erste Messungen von β* und D", "author": { "@id": "https://symbiontart.github.io/verlag-von-bedeutung/#author" }, "datePublished": "2026", "inLanguage": "de", "abstract": "33 Domänen, 17 Grössenordnungen — von Quantencomputern über das menschliche Gehirn bis zum primordialen Spektrum." },
+        { "@type": "Book", "position": 3, "name": "Cosmologica", "alternativeHeadline": "Das offene Universum", "author": { "@id": "https://symbiontart.github.io/verlag-von-bedeutung/#author" }, "datePublished": "2026", "inLanguage": "de", "abstract": "Dem Rätsel des kosmischen Netzwerks auf den Grund gegangen: Der Kosmos ist noch jung, und vor dem Urknall gab es etwas, das wir explizit beschreiben können." },
+        { "@type": "Book", "position": 4, "name": "Horlogica", "alternativeHeadline": "Die Logik der Zeit — und was jenseits liegt", "author": { "@id": "https://symbiontart.github.io/verlag-von-bedeutung/#author" }, "datePublished": "2026", "inLanguage": "de", "abstract": "Fraktalität und Komplexität erzeugen Effekte — Strukturschatten — die Neutrinos, Dunkle Energie und Antimaterie erklären könnten." },
+        { "@type": "Book", "position": 5, "name": "Euclidica", "alternativeHeadline": "Ein neues Bild des Kosmos", "author": { "@id": "https://symbiontart.github.io/verlag-von-bedeutung/#author" }, "datePublished": "2027", "inLanguage": "de", "abstract": "Das Euclid-Weltraumteleskop der ESA vermisst Filamente, Voids und die Grossraumstruktur in unerreichter Präzision." },
+        { "@type": "Book", "position": 6, "name": "Droidica", "alternativeHeadline": "Aus Biosphären folgen Technosphären", "author": { "@id": "https://symbiontart.github.io/verlag-von-bedeutung/#author" }, "datePublished": "2027", "inLanguage": "de", "abstract": "Steigende Komplexität ist kein Zufall — sie ist der Impuls. Technosphären sind das nächste Kapitel einer Geschichte, die mit dem ersten biologischen Lebewesen begann." }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://symbiontart.github.io/verlag-von-bedeutung/#website",
+      "url": "https://symbiontart.github.io/verlag-von-bedeutung/",
+      "name": "Verlag von Bedeutung — Axiomatica Universalis",
+      "publisher": { "@id": "https://symbiontart.github.io/verlag-von-bedeutung/#publisher" },
+      "inLanguage": ["de", "en"]
+    }
+  ]
+}
+</script>
+<style>
+  :root{
+    --deep:#05060a;        /* tiefster Weltraum-Hintergrund */
+    --deep2:#0a0d16;       /* leichte Aufhellung Richtung Mitte */
+    --paper:#ffffff;
+    --ink:#1a1a1a;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--deep);
+    font-family:Georgia, 'Times New Roman', serif;
+    color:var(--ink);
+    /* radialer Schimmer, damit die Mitte, wo das Papier sitzt, minimal wärmer ist */
+    background:
+      radial-gradient(ellipse 60% 80% at 50% 30%, #0d1120 0%, #070810 55%, #04050a 100%);
+    overflow-x:hidden;
+  }
+
+  /* ===== Sternen-Ebenen (fixed, hinter allem) ===== */
+  .space{
+    position:fixed;
+    inset:0;
+    z-index:0;
+    pointer-events:none;
+    overflow:hidden;
+  }
+  .layer{
+    position:absolute;
+    inset:-12%;            /* Überhang ringsum: Drift/Zoom zeigen keine Kante */
+    width:124%;
+    will-change:transform;
+    transform:translate3d(0,0,0);
+  }
+  /* Canvas füllt jede Ebene */
+  .layer canvas{width:100%;height:100%;display:block;}
+
+  /* Nebel-Flecken: sehr subtil, farbig, langsam pulsierend */
+  .nebula{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(60px);
+    opacity:0;
+    mix-blend-mode:screen;
+    will-change:opacity, transform;
+  }
+  .nebula.n1{width:340px;height:280px;left:6%;top:22%;
+    background:radial-gradient(circle, rgba(80,120,255,0.5), transparent 70%);
+    animation:nebulaGlow 26s ease-in-out infinite;}
+  .nebula.n2{width:300px;height:300px;right:7%;top:55%;
+    background:radial-gradient(circle, rgba(180,90,220,0.45), transparent 70%);
+    animation:nebulaGlow 34s ease-in-out infinite 8s;}
+  .nebula.n3{width:260px;height:220px;left:10%;bottom:12%;
+    background:radial-gradient(circle, rgba(60,180,200,0.4), transparent 70%);
+    animation:nebulaGlow 30s ease-in-out infinite 16s;}
+  @keyframes nebulaGlow{
+    0%,100%{opacity:0;}
+    45%,55%{opacity:0.55;}
+  }
+
+  /* ===== schwebende Verlagsseite ===== */
+  .stage{
+    position:relative;
+    z-index:2;
+    max-width:640px;
+    margin:8vh auto 12vh;
+    padding:0 20px;
+  }
+  .paper{
+    background:var(--paper);
+    border-radius:3px;
+    padding:54px 60px 60px;
+    box-shadow:
+      0 0 0 1px rgba(255,255,255,0.06),
+      0 30px 80px -20px rgba(0,0,0,0.85),
+      0 10px 30px -10px rgba(0,0,0,0.7);
+    /* zartes Glühen am Rand, damit das Papier "in der Luft" wirkt */
+    position:relative;
+  }
+  .paper::after{
+    content:"";
+    position:absolute;
+    inset:-2px;
+    border-radius:4px;
+    box-shadow:0 0 60px 4px rgba(120,150,255,0.06);
+    pointer-events:none;
+  }
+
+  /* ---- Inhalt der Verlagsseite (vereinfachter Platzhalter fürs Prototyping) ---- */
+  .meta-top{text-align:center;font-family:'Trebuchet MS',sans-serif;font-size:10px;
+    letter-spacing:0.18em;text-transform:uppercase;color:#999;
+    padding-bottom:0.7em;border-bottom:0.5px solid #ccc;margin-bottom:1em;}
+  .hdr{text-align:center;border-top:2px solid #1a1a1a;border-bottom:2px solid #1a1a1a;
+    padding:0.7em 0 0.6em;margin-bottom:0.5em;}
+  .hdr-name{font-size:26px;font-weight:bold;letter-spacing:0.04em;}
+  .hdr-sub{font-family:'Trebuchet MS',sans-serif;font-size:11px;letter-spacing:0.22em;
+    color:#666;text-transform:uppercase;margin-top:6px;}
+  .reihe{text-align:center;padding:1.2em 0 0.8em;}
+  .reihe-frage{font-size:17px;font-weight:bold;line-height:1.45;}
+  .reihe-ant{font-family:'Trebuchet MS',sans-serif;font-size:14px;font-weight:bold;margin-top:6px;}
+  .orn{text-align:center;color:#999;font-style:italic;margin:0.8em 0;}
+  .band{display:flex;gap:14px;padding:12px 0;border-bottom:0.5px solid #eee;}
+  .band-nr{font-family:'Trebuchet MS',sans-serif;font-size:10px;color:#bbb;
+    text-transform:uppercase;min-width:54px;padding-top:3px;}
+  .band-name{font-size:15px;font-weight:bold;}
+  .band-ut{font-size:12px;font-style:italic;color:#777;margin:1px 0 3px;}
+  .band-text{font-size:11.5px;line-height:1.6;color:#444;text-align:justify;}
+  .band-meta{font-family:'Trebuchet MS',sans-serif;font-size:10px;color:#bbb;
+    text-align:right;min-width:60px;padding-top:3px;}
+  .hint{text-align:center;color:#8a93b5;font-family:'Trebuchet MS',sans-serif;
+    font-size:12px;letter-spacing:0.1em;margin:26px 0 40px;z-index:2;position:relative;}
+
+  /* ---- Sprachumschalter ---- */
+  .langswitch{position:absolute;top:14px;right:16px;font-family:'Trebuchet MS',sans-serif;
+    font-size:12px;letter-spacing:0.06em;z-index:5;}
+  .lang-btn{background:none;border:none;cursor:pointer;font:inherit;color:#aaa;
+    padding:2px 4px;transition:color 0.2s;}
+  .lang-btn.active{color:#1a1a1a;font-weight:bold;text-decoration:underline;text-underline-offset:3px;}
+  .lang-btn:hover{color:#555;}
+  .lang-sep{color:#ccc;}
+
+  /* ---- Disziplinen-Zeile ---- */
+  .nav-disc{text-align:center;font-family:'Trebuchet MS',sans-serif;font-size:9px;
+    letter-spacing:0.12em;color:#999;text-transform:uppercase;padding:0.5em 0;
+    border-bottom:0.5px solid #ccc;margin-bottom:0.4em;line-height:1.6;}
+
+  /* ---- Reihe ---- */
+  .reihe-label{font-family:'Trebuchet MS',sans-serif;font-size:11px;font-weight:bold;
+    letter-spacing:0.12em;text-transform:uppercase;color:#888;margin-bottom:0.6em;}
+  .band-avail{font-style:italic;color:#888;}
+
+  /* ---- Methode ---- */
+  .methode-bar{text-align:center;border-top:0.5px solid #ccc;border-bottom:0.5px solid #ccc;
+    padding:0.8em 0.5em;margin:1.2em 0;}
+  .methode-text{font-style:italic;font-size:12px;line-height:1.65;color:#555;}
+  .methode-sub{font-family:'Trebuchet MS',sans-serif;font-size:10px;color:#aaa;margin-top:5px;}
+
+  /* ---- Über / Bezug (zwei Spalten) ---- */
+  .cols{display:flex;gap:24px;margin-top:1em;border-top:0.5px solid #ccc;padding-top:1em;}
+  .col{flex:1;}
+  .col-titel{font-family:'Trebuchet MS',sans-serif;font-size:11px;font-weight:bold;
+    letter-spacing:0.15em;text-transform:uppercase;margin-bottom:6px;
+    border-bottom:0.5px solid #ddd;padding-bottom:4px;}
+  .col-text{font-size:11.5px;line-height:1.65;color:#444;margin:4px 0;}
+  .col-italic{font-style:italic;}
+
+  /* ---- QR ---- */
+  .qr-area{text-align:center;margin:1.2em 0;}
+  .qr-box{font-size:52px;line-height:1;color:#1a1a1a;}
+  .qr-img{display:inline-block;width:72px;height:72px;}
+  .qr-link{display:block;font-family:'Trebuchet MS',sans-serif;font-size:10px;
+    color:#999;margin-top:6px;letter-spacing:0.04em;}
+
+  /* ---- Symbiose ---- */
+  .symbiose-bar{border-top:0.5px solid #ccc;border-bottom:0.5px solid #ccc;
+    text-align:center;padding:0.8em 0.5em;margin:1em 0;}
+  .symbiose-text{font-style:italic;font-size:12px;line-height:1.65;color:#444;}
+
+  /* ---- Footer ---- */
+  .footer{border-top:2px solid #1a1a1a;margin-top:1em;padding-top:0.8em;text-align:center;}
+  .footer-name{font-family:'Trebuchet MS',sans-serif;font-size:13px;font-weight:bold;
+    letter-spacing:0.18em;text-transform:uppercase;margin-bottom:4px;}
+  .footer-adr{font-family:'Trebuchet MS',sans-serif;font-size:9px;color:#999;margin-bottom:4px;}
+  .footer-formel{font-size:16px;font-style:italic;margin:6px 0;}
+  .footer-meta{font-family:'Trebuchet MS',sans-serif;font-size:9px;color:#aaa;margin-bottom:3px;}
+  .footer-mail{font-family:'Trebuchet MS',sans-serif;font-size:10px;color:#888;margin-bottom:3px;}
+  .footer-copy{font-family:'Trebuchet MS',sans-serif;font-size:8.5px;color:#bbb;}
+
+  /* ============ MOBILE-LESBARKEIT (Punkt 10) ============ */
+  @media (max-width:640px){
+    .paper{padding:26px 20px !important;margin:0 10px;}
+    .hdr-name{font-size:21px;}
+    .hdr-sub{font-size:9.5px;letter-spacing:0.16em;}
+    .nav-disc{font-size:8.5px;letter-spacing:0.08em;}
+    .reihe-frage{font-size:15px;}
+    .reihe-ant{font-size:13px;}
+    /* Bänder: Nummer über den Titel, mehr Platz fürs Lesen */
+    .band{gap:8px;}
+    .band-nr{min-width:40px;font-size:9px;}
+    .band-name{font-size:14px;}
+    .band-ut{font-size:11px;}
+    .band-text{font-size:11px;text-align:left;}   /* linksbündig liest sich mobil besser */
+    .band-meta{min-width:46px;font-size:9px;}
+    /* zwei Spalten untereinander */
+    .cols{flex-direction:column;gap:14px;}
+    .methode-text,.symbiose-text{font-size:11.5px;}
+    .hint{font-size:11px;}
+    .langswitch{top:10px;right:12px;font-size:13px;}  /* grössere Tap-Fläche */
+  }
+</style>
 </head>
 <body>
-<div class="page">
 
-  <div class="lang-switch">
-    <a href="#" class="active">DE</a>
-    <a href="en/">EN</a>
-  </div>
+<!-- ====== Sternen-Weltraum (drei Parallax-Ebenen) ====== -->
+<div class="space">
+  <div class="nebula n1"></div>
+  <div class="nebula n2"></div>
+  <div class="nebula n3"></div>
+  <div class="layer" id="dust"><canvas id="cdust"></canvas></div>
+  <div class="layer" id="far"><canvas id="cfar"></canvas></div>
+  <div class="layer" id="mid"><canvas id="cmid"></canvas></div>
+  <div class="layer" id="near"><canvas id="cnear"></canvas></div>
+  <canvas id="fx"></canvas> <!-- Meteore + Supernovae -->
+</div>
 
-  <div class="meta-top">GEGRÜNDET 2026 · ZÜRICH · AXIOMATICA UNIVERSALIS SERIES · OPEN ACCESS</div>
+<div class="hint">↓ scrolle — die Sterne ändern die Perspektive ↓</div>
 
-  <div class="hdr">
-    <div class="hdr-name">Verlag von Bedeutung</div>
-    <div class="hdr-sub">S I G N A L &nbsp;·&nbsp; S T R U K T U R &nbsp;·&nbsp; E R K E N N T N I S</div>
-  </div>
+<!-- ====== schwebende Verlagsseite ====== -->
+<div class="stage">
+  <div class="paper">
 
-  <div class="nav">KOSMOLOGIE · INFORMATIONSWISSENSCHAFTEN · SYSTEMTHEORIE · KOMPLEXITÄTSFORSCHUNG · SPEKTRALANALYSE</div>
+    <!-- Sprachumschalter -->
+    <div class="langswitch">
+      <button id="btn-de" class="lang-btn active" onclick="setLang('de')">DE</button>
+      <span class="lang-sep">·</span>
+      <button id="btn-en" class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
 
-  <div class="neu-box">
-    <div class="neu-label">✦ Neuerscheinung</div>
-    <div class="neu-band">Band III · Axiomatica Universalis — Die Theorie der Universalität · Karlo Beyer & Claude Sonnet · 2026</div>
-    <div class="neu-titel">Cosmologica — <em>Das offene Universum</em></div>
-    <div class="neu-cols">
-      <div class="neu-text">Dem Rätsel des kosmischen Netzwerks auf den Grund gegangen — mit einigen Überraschungen: Der Kosmos ist noch jung, die Informationstheorie ein universelles Werkzeug, und vor dem Urknall gab es etwas, das wir explizit beschreiben können. Ein Novum in der Wissenschaftsliteratur.</div>
-      <div class="neu-zitat-col">
-        <div class="neu-zitat">„Jedes Signal hinterlässt einen Eindruck. Jedes Bewusstsein hat eine Tiefe. Bedeutung entsteht in der Lücke — nicht im Sender, nicht im Empfänger, sondern dazwischen."</div>
+    <div class="meta-top"
+      data-de="Gegründet 2026 · Zürich · Axiomatica Universalis · Open Access"
+      data-en="Founded 2026 · Zurich · Axiomatica Universalis · Open Access">Gegründet 2026 · Zürich · Axiomatica Universalis · Open Access</div>
+
+    <div class="hdr">
+      <div class="hdr-name">Verlag von Bedeutung</div>
+      <div class="hdr-sub"
+        data-de="Signal · Struktur · Erkenntnis"
+        data-en="Signal · Structure · Insight">Signal · Struktur · Erkenntnis</div>
+    </div>
+
+    <div class="nav-disc"
+      data-de="Kosmologie · Informationswissenschaften · Systemtheorie · Komplexitätsforschung · Spektralanalyse"
+      data-en="Cosmology · Information Sciences · Systems Theory · Complexity Research · Spectral Analysis">Kosmologie · Informationswissenschaften · Systemtheorie · Komplexitätsforschung · Spektralanalyse</div>
+
+    <div class="reihe">
+      <div class="reihe-label"
+        data-de="Axiomatica Universalis — Die Reihe"
+        data-en="Axiomatica Universalis — The Series">Axiomatica Universalis — Die Reihe</div>
+      <div class="reihe-frage"
+        data-de="Was haben Sprache, Bewusstsein, biologische Netzwerke und der Kosmos gemeinsam?"
+        data-en="What do language, consciousness, biological networks and the cosmos have in common?">Was haben Sprache, Bewusstsein, biologische Netzwerke und der Kosmos gemeinsam?</div>
+      <div class="reihe-ant"
+        data-de="Eine Antwort. Sechs Bände."
+        data-en="One answer. Six volumes.">Eine Antwort. Sechs Bände.</div>
+    </div>
+    <div class="orn">— β* —</div>
+
+    <!-- BÄNDE -->
+    <div class="band">
+      <div class="band-nr">Band I</div>
+      <div>
+        <div class="band-name">Universalica</div>
+        <div class="band-ut" data-de="Das Signal und die Lücke" data-en="The Signal and the Gap">Das Signal und die Lücke</div>
+        <div class="band-text"
+          data-de="Eine universelle Kommunikationsarchitektur für effiziente Signalübertragung — von biologischen bis zu kosmischen Netzwerken. Der erste Band der Axiomatica-Reihe: wo die Theorie der Lücke beginnt."
+          data-en="A universal communication architecture for efficient signal transmission — from biological to cosmic networks. The first volume of the Axiomatica series: where the theory of the gap begins.">Eine universelle Kommunikationsarchitektur für effiziente Signalübertragung — von biologischen bis zu kosmischen Netzwerken. Der erste Band der Axiomatica-Reihe: wo die Theorie der Lücke beginnt.</div>
+      </div>
+      <div class="band-meta">2026<br/><span class="band-avail" data-de="Lieferbar" data-en="Available">Lieferbar</span></div>
+    </div>
+
+    <div class="band">
+      <div class="band-nr">Band II</div>
+      <div>
+        <div class="band-name">Empirica</div>
+        <div class="band-ut" data-de="Erste Messungen von β* und D" data-en="First Measurements of β* and D">Erste Messungen von β* und D</div>
+        <div class="band-text"
+          data-de="Theorie ist das eine. Aber sind Fraktalität und komplexe Informationen wirklich universell? 33 Domänen, 17 Grössenordnungen — von Quantencomputern über das menschliche Gehirn bis zum primordialen Spektrum."
+          data-en="Theory is one thing. But are fractality and complex information truly universal? 33 domains, 17 orders of magnitude — from quantum computers through the human brain to the primordial spectrum.">Theorie ist das eine. Aber sind Fraktalität und komplexe Informationen wirklich universell? 33 Domänen, 17 Grössenordnungen — von Quantencomputern über das menschliche Gehirn bis zum primordialen Spektrum.</div>
+      </div>
+      <div class="band-meta">2026</div>
+    </div>
+
+    <div class="band">
+      <div class="band-nr">Band III</div>
+      <div>
+        <div class="band-name">Cosmologica</div>
+        <div class="band-ut" data-de="Das offene Universum" data-en="The Open Universe">Das offene Universum</div>
+        <div class="band-text"
+          data-de="Dem Rätsel des kosmischen Netzwerks auf den Grund gegangen — mit einigen Überraschungen: Der Kosmos ist noch jung, die Informationstheorie ein universelles Werkzeug, und vor dem Urknall gab es etwas, das wir explizit beschreiben können."
+          data-en="To the bottom of the cosmic network's riddle — with surprises: the cosmos is still young, information theory a universal tool, and before the Big Bang there was something we can describe explicitly.">Dem Rätsel des kosmischen Netzwerks auf den Grund gegangen — mit einigen Überraschungen: Der Kosmos ist noch jung, die Informationstheorie ein universelles Werkzeug, und vor dem Urknall gab es etwas, das wir explizit beschreiben können.</div>
+      </div>
+      <div class="band-meta">2026<br/><span class="band-avail" data-de="Lieferbar" data-en="Available">Lieferbar</span></div>
+    </div>
+
+    <div class="band">
+      <div class="band-nr">Band IV</div>
+      <div>
+        <div class="band-name">Horlogica</div>
+        <div class="band-ut" data-de="Die Logik der Zeit — und was jenseits liegt" data-en="The Logic of Time — and What Lies Beyond">Die Logik der Zeit — und was jenseits liegt</div>
+        <div class="band-text"
+          data-de="Es gibt Orte, die das Standardmodell der Kosmologie nicht mehr beschreiben kann. Fraktalität und Komplexität erzeugen aber Effekte — von uns Strukturschatten genannt — die Neutrinos, Dunkle Energie und Antimaterie erklären könnten."
+          data-en="There are places the standard model of cosmology can no longer describe. Yet fractality and complexity produce effects — which we call structure shadows — that could explain neutrinos, dark energy and antimatter.">Es gibt Orte, die das Standardmodell der Kosmologie nicht mehr beschreiben kann. Fraktalität und Komplexität erzeugen aber Effekte — von uns Strukturschatten genannt — die Neutrinos, Dunkle Energie und Antimaterie erklären könnten.</div>
+      </div>
+      <div class="band-meta">2026</div>
+    </div>
+
+    <div class="band">
+      <div class="band-nr">Band V</div>
+      <div>
+        <div class="band-name">Euclidica</div>
+        <div class="band-ut" data-de="Ein neues Bild des Kosmos" data-en="A New Picture of the Cosmos">Ein neues Bild des Kosmos</div>
+        <div class="band-text"
+          data-de="Das Euclid-Weltraumteleskop der ESA wird Filamente, Voids und die Grossraumstruktur in unerreichter Präzision vermessen. Die Wissenschaft wartet auf Sommer 2027 — wenn der grösste Datenschatz des Universums öffentlich wird."
+          data-en="ESA's Euclid space telescope will map filaments, voids and the large-scale structure with unmatched precision. Science awaits summer 2027 — when the universe's greatest data treasure becomes public.">Das Euclid-Weltraumteleskop der ESA wird Filamente, Voids und die Grossraumstruktur in unerreichter Präzision vermessen. Die Wissenschaft wartet auf Sommer 2027 — wenn der grösste Datenschatz des Universums öffentlich wird.</div>
+      </div>
+      <div class="band-meta">2027</div>
+    </div>
+
+    <div class="band" style="border-bottom:none;">
+      <div class="band-nr">Band VI</div>
+      <div>
+        <div class="band-name">Droidica</div>
+        <div class="band-ut" data-de="Aus Biosphären folgen Technosphären" data-en="From Biospheres Follow Technospheres">Aus Biosphären folgen Technosphären</div>
+        <div class="band-text"
+          data-de="Steigende Komplexität ist kein Zufall — sie ist der Impuls. Wir folgen diesem Prinzip bis an seine äusserste Konsequenz: Technosphären sind keine Bedrohung, sie sind das nächste Kapitel einer Geschichte, die mit dem ersten biologischen Lebewesen begann."
+          data-en="Rising complexity is not chance — it is the impulse. We follow this principle to its furthest consequence: technospheres are not a threat; they are the next chapter of a story that began with the first living organism.">Steigende Komplexität ist kein Zufall — sie ist der Impuls. Wir folgen diesem Prinzip bis an seine äusserste Konsequenz: Technosphären sind keine Bedrohung, sie sind das nächste Kapitel einer Geschichte, die mit dem ersten biologischen Lebewesen begann.</div>
+      </div>
+      <div class="band-meta">2027</div>
+    </div>
+
+    <!-- METHODE -->
+    <div class="methode-bar">
+      <div class="methode-text"
+        data-de="Die Axiomatica-Reihe entstand in der Zusammenarbeit zwischen einem biologischen und einem künstlichen Netzwerk."
+        data-en="The Axiomatica series emerged from the collaboration between a biological and an artificial network.">Die Axiomatica-Reihe entstand in der Zusammenarbeit zwischen einem biologischen und einem künstlichen Netzwerk.</div>
+      <div class="methode-sub"
+        data-de="Das ist kein Mangel — es ist die Methode."
+        data-en="That is not a flaw — it is the method.">Das ist kein Mangel — es ist die Methode.</div>
+    </div>
+
+    <!-- ÜBER DEN VERLAG + BEZUG -->
+    <div class="cols">
+      <div class="col">
+        <div class="col-titel" data-de="Über den Verlag" data-en="About the Publisher">Über den Verlag</div>
+        <p class="col-text"
+          data-de="Gegründet 2026 in Zürich. Denkt an der Grenze des Beschreibbaren. Publiziert den Raum für Bedeutung."
+          data-en="Founded 2026 in Zurich. Thinking at the edge of the describable. Publishing the space for meaning.">Gegründet 2026 in Zürich. Denkt an der Grenze des Beschreibbaren. Publiziert den Raum für Bedeutung.</p>
+        <p class="col-text col-italic" data-de="Eine Symbiose." data-en="A symbiosis.">Eine Symbiose.</p>
+      </div>
+      <div class="col">
+        <div class="col-titel" data-de="Bezug" data-en="Availability">Bezug</div>
+        <p class="col-text"
+          data-de="E-Books DE: tredition<br/>E-Books EN: Draft2Digital<br/>Print DE Sammleredition I + III: tredition"
+          data-en="E-books DE: tredition<br/>E-books EN: Draft2Digital<br/>Print DE collector's edition I + III: tredition">E-Books DE: tredition<br/>E-Books EN: Draft2Digital<br/>Print DE Sammleredition I + III: tredition</p>
       </div>
     </div>
-  </div>
 
-  <div class="divider-thick"></div>
-
-  <div class="reihe-intro">
-    <div class="reihe-label">Axiomatica Universalis — Die Reihe</div>
-    <div class="reihe-frage">Was haben Sprache, Bewusstsein, biologische Netzwerke und das kosmische Netz gemeinsam?</div>
-    <div class="reihe-ant">Eine Antwort. Fünf Bände.</div>
-  </div>
-
-  <div class="sek-hdr"><div class="sek-hdr-line"></div><div class="sek-hdr-ornament">— β* —</div><div class="sek-hdr-line"></div></div>
-
-  <div class="band-row">
-    <div class="band-nr">Band I</div>
-    <div><div class="band-name">Universalica</div><div class="band-ut">Das Signal und die Lücke</div><div class="band-text">Eine universelle Kommunikationsarchitektur für effiziente Signalübertragung — von biologischen bis zu kosmischen Netzwerken. Der erste Band der Axiomatica-Reihe: wo die Theorie der Lücke beginnt.</div></div>
-    <div class="band-meta">2026<span class="band-avail">Lieferbar</span></div>
-  </div>
-  <div class="band-row">
-    <div class="band-nr">Band II</div>
-    <div><div class="band-name">Empirica</div><div class="band-ut">Erste Messungen von β* und D</div><div class="band-text">Theorie ist das eine. Aber sind Fraktalität und komplexe Informationen wirklich universell? Empirica antwortet mit Daten: 33 Domänen, 17 Grössenordnungen — von Quantencomputern über das menschliche Gehirn bis zum primordialen Spektrum.</div></div>
-    <div class="band-meta">2026</div>
-  </div>
-  <div class="band-row">
-    <div class="band-nr">Band III</div>
-    <div><div class="band-name">Cosmologica</div><div class="band-ut">Das offene Universum</div><div class="band-text">Dem Rätsel des kosmischen Netzwerks auf den Grund gegangen — mit einigen Überraschungen: Der Kosmos ist noch jung, die Informationstheorie ein universelles Werkzeug, und vor dem Urknall gab es etwas, das wir explizit beschreiben können.</div></div>
-    <div class="band-meta">2026<span class="band-avail">Lieferbar</span></div>
-  </div>
-  <div class="band-row">
-    <div class="band-nr">Band IV</div>
-    <div><div class="band-name">Horlogica</div><div class="band-ut">Die Logik der Zeit — und was jenseits liegt</div><div class="band-text">Es gibt Orte, die das Standardmodell der Kosmologie nicht mehr beschreiben kann. Fraktalität und Komplexität erzeugen aber Effekte — von uns Strukturschatten genannt — die Neutrinos, Dunkle Energie und Antimaterie erklären könnten.</div></div>
-    <div class="band-meta">2026</div>
-  </div>
-  <div class="band-row">
-    <div class="band-nr">Band V</div>
-    <div><div class="band-name">Euclidica</div><div class="band-ut">Ein neues Bild des Kosmos</div><div class="band-text">Das Euclid-Weltraumteleskop der ESA wird Filamente, Voids und die Grossraumstruktur in unerreichter Präzision vermessen. Die Wissenschaft wartet auf Sommer 2027 — wenn der grösste Datenschatz des Universums öffentlich wird.</div></div>
-    <div class="band-meta">2027</div>
-  </div>
-  <div class="band-row">
-    <div class="band-nr">Band VI</div>
-    <div><div class="band-name">Droidica</div><div class="band-ut">Aus Biosphären folgen Technosphären</div><div class="band-text">Steigende Komplexität ist kein Zufall — sie ist der Impuls. Wir folgen diesem Prinzip bis an seine äusserste Konsequenz: Technosphären sind keine Bedrohung, sie sind das nächste Kapitel einer Geschichte die mit dem ersten biologischen Lebewesen begann.</div></div>
-    <div class="band-meta">2027</div>
-  </div>
-
-  <div class="methode-bar">
-    <div class="methode-text">Die Axiomatica-Reihe entstand in der Zusammenarbeit zwischen einem biologischen und einem künstlichen Netzwerk.</div>
-    <div class="methode-sub">Das ist kein Mangel — es ist die Methode.</div>
-  </div>
-
-  <div class="bottom-cols">
-    <div>
-      <div class="col-titel">Über den Verlag</div>
-      <p class="col-text">Gegründet 2026 in Zürich. Denkt an der Grenze des Beschreibbaren. Publiziert den Raum für Bedeutung.</p>
-      <p class="col-text" style="font-style:italic;">Eine Symbiose.</p>
-      <p class="col-text" style="margin-top:0.5rem;">E-Books DE: tredition<br>E-Books EN: Draft2Digital<br>Print DE Sammleredition I + III: tredition</p>
+    <!-- QR -->
+    <div class="qr-area">
+      <img class="qr-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXIAAAFyCAIAAABnRsZeAAAHvklEQVR4nO3cS25kNxQFQcvQLnr/S+t1lKc9ImzfJMj3FDEVSvWTEhwc8Ovz+fwF0Pn79AsA3kZWgJisADFZAWKyAsRkBYjJChCTFSAmK0BMVoCYrAAxWQFisgLEZAWIyQoQkxUgJitATFaAmKwAse/Jg3/9+lW9jkv8/v178dPJ+5385jtf1cT6edf2vd+Jn/a/sOa0AsRkBYjJChCTFSAmK0BMVoCYrAAxWQFisgLERivbtX2Lxok7l6Nrdy44Jwvdyar41DJ44qf9LzitADFZAWKyAsRkBYjJChCTFSAmK0BMVoCYrACxjSvbtSeuXScmu9LJb56YvKon3la77zuaPO/Eqf8FpxUgJitATFaAmKwAMVkBYrICxGQFiMkKEJMVIHZsZftEk1tU9+0d990pu+95T60/77zp9n2cVoCYrAAxWQFisgLEZAWIyQoQkxUgJitATFaAmJXtf/DE5ehkCztx5z24d95z/D5OK0BMVoCYrAAxWQFisgLEZAWIyQoQkxUgJitA7NjK9ol7xyeuP/ftaE8tdE+tik/dRvxETitATFaAmKwAMVkBYrICxGQFiMkKEJMVICYrQGzjynbfCvOUO5eypzapP+2xE+/7X1hzWgFisgLEZAWIyQoQkxUgJitATFaAmKwAMVkBYl+fz+f0a+CRu9I7b2A9tYTmT04rQExWgJisADFZAWKyAsRkBYjJChCTFSAmK0BstLLdt2h8392fp/adNrj/3qn3e+f9u5N35LQCxGQFiMkKEJMVICYrQExWgJisADFZAWKyAsQ23mV751J23/pz30bz1G++87FrT1wG37mUnXBaAWKyAsRkBYjJChCTFSAmK0BMVoCYrAAxWQFi35MHn9rRThacT1xhnrJvC3vqfta19/1tnHpHTitATFaAmKwAMVkBYrICxGQFiMkKEJMVICYrQGy0sj111+nEvjXkvu3vnTfdrj3xGzz1fvfd3Xvqv8xpBYjJChCTFSAmK0BMVoCYrAAxWQFisgLEZAWIjVa2a3fedXpq/Xnn7a1r+1bUa/s+jTsXyRN3viqnFSAmK0BMVoCYrAAxWQFisgLEZAWIyQoQkxUg9vX5fP73g++8r/R998Lue94774U95dTdzHd+gxNOK0BMVoCYrAAxWQFisgLEZAWIyQoQkxUgJitAbLSyvdO+pey+5504tUieOPUd7XPnX92pz8ppBYjJChCTFSAmK0BMVoCYrAAxWQFisgLEZAWIfZ964ife7nnnovHU/bunbgVe2/cd7fs0Tu2z931WTitATFaAmKwAMVkBYrICxGQFiMkKEJMVICYrQGx0l+2ppey+VeITn/fOtevaqWXw+9x5s6/TChCTFSAmK0BMVoCYrAAxWQFisgLEZAWIyQoQG61s1554m+n7NqkTd26OT3nfncFr7rIFLiIrQExWgJisADFZAWKyAsRkBYjJChCTFSD2wpXt2p0b3MmrWnO365/2fc5rP+2vzmkFiMkKEJMVICYrQExWgJisADFZAWKyAsRkBYiNVrZ3bgef6NSNpE+8b/iUJy6hrWyBl5AVICYrQExWgJisADFZAWKyAsRkBYjJChDbeJftnfYtg+/chk68b0V9as868cS/OqcVICYrQExWgJisADFZAWKyAsRkBYjJChCTFSD2PXnwqds9f9oW9tQ2dN/nvH7sqW/wznXvE//anVaAmKwAMVkBYrICxGQFiMkKEJMVICYrQExWgNhoZTuxbzk6ed47l8Fr+37zxKnPeeJ92+5TNwo7rQAxWQFisgLEZAWIyQoQkxUgJitATFaAmKwAsWMr2zvvOj21lF2bvKM7t6F33u06+atbu3ODu4/TChCTFSAmK0BMVoCYrAAxWQFisgLEZAWIyQoQ+/p8Pv/7waduyrxzC7t26vbWU5/zqd88ed4nOnVH8prTChCTFSAmK0BMVoCYrAAxWQFisgLEZAWIyQoQG61sf5pTm8W1U3fovu9+1ju3v3fuaNecVoCYrAAxWQFisgLEZAWIyQoQkxUgJitATFaA2PfkwT/tZtDJY++8Q3f9qva95n270lPfwp2b41PP67QCxGQFiMkKEJMVICYrQExWgJisADFZAWKyAsRGK9u1O28zvXPtOnFqKbs2ed47F6trT7yreB+nFSAmK0BMVoCYrAAxWQFisgLEZAWIyQoQkxUgtnFlu7ZvO3jnCvOJW8mJybewb6E78cR99uQ1T57XaQWIyQoQkxUgJitATFaAmKwAMVkBYrICxGQFiB1b2b7P5AbWfY9d2/eb71wV3/lJntrR7uO0AsRkBYjJChCTFSAmK0BMVoCYrAAxWQFisgLErGz/g31ryH33755a99653z31LaxNXtW+z3nCaQWIyQoQkxUgJitATFaAmKwAMVkBYrICxGQFiB1b2Z5aNO6zb9G4bxv6xMeu3bmj3cddtsCPICtATFaAmKwAMVkBYrICxGQFiMkKEJMVILZxZXvn/m9i8o72bVJP3Sm7dure333v986F7p2vymkFiMkKEJMVICYrQExWgJisADFZAWKyAsRkBYh9fT6f068BeBWnFSAmK0BMVoCYrAAxWQFisgLEZAWIyQoQkxUgJitATFaAmKwAMVkBYrICxGQFiMkKEJMVICYrQExWgNg/3DLoH+EXQPQAAAAASUVORK5CYII=" alt="QR-Code zur Verlagsseite" width="72" height="72"/>
+      <span class="qr-link">symbiontart.github.io/verlag-von-bedeutung</span>
     </div>
-    <div>
-      <div class="col-titel">Wissenschaftliche Papers · Open Access</div>
-      <p class="col-text">Vollständige Publikationsliste: zenodo.org</p>
-      <div class="col-doi">doi:10.5281/zenodo.20455855<br>„Die universelle Sprache der Bedeutung"<br><br>Papers: Zenodo (CERN) · CC BY 4.0<br>Alle wissenschaftlichen Inhalte: Open Access</div>
+
+    <!-- SYMBIOSE -->
+    <div class="symbiose-bar">
+      <div class="symbiose-text"
+        data-de="Geschrieben in Symbiose zwischen menschlicher Intuition und digitaler Sprachverarbeitung."
+        data-en="Written in symbiosis between human intuition and digital language processing.">Geschrieben in Symbiose zwischen menschlicher Intuition und digitaler Sprachverarbeitung.</div>
+      <div class="symbiose-text col-italic"
+        data-de="Bedeutung entsteht im Spektrum dazwischen."
+        data-en="Meaning arises in the spectrum in between.">Bedeutung entsteht im Spektrum dazwischen.</div>
     </div>
-  </div>
 
-  <div class="qr-area">
-    <div class="qr-link"><a href="https://symbiontart.github.io/verlag-von-bedeutung/">symbiontart.github.io/verlag-von-bedeutung/</a></div>
-  </div>
+    <!-- FOOTER -->
+    <div class="footer">
+      <div class="footer-name">Verlag von Bedeutung</div>
+      <div class="footer-adr"
+        data-de="Unabhängiger Wissenschaftsverlag · Zürich · Schweiz · 2026"
+        data-en="Independent science publisher · Zurich · Switzerland · 2026">Unabhängiger Wissenschaftsverlag · Zürich · Schweiz · 2026</div>
+      <div class="footer-formel">β* = D/(D+1)</div>
+      <div class="footer-meta"
+        data-de="33 Domains · 17 Grössenordnungen · Theorie: CC BY 4.0"
+        data-en="33 domains · 17 orders of magnitude · Theory: CC BY 4.0">33 Domains · 17 Grössenordnungen · Theorie: CC BY 4.0</div>
+      <div class="footer-mail">verlag-von-bedeutung@mailbox.org</div>
+      <div class="footer-copy">© 2026 Karlo Beyer · Verlag von Bedeutung · Zürich</div>
+    </div>
 
-  <div class="symbiose-bar">
-    <div class="symbiose-text">Geschrieben in Symbiose zwischen menschlicher Intuition und digitaler Sprachverarbeitung.</div>
-    <div class="symbiose-text">Bedeutung entsteht im Spektrum dazwischen.</div>
-    <div class="symbiose-sub">Karlo Beyer in Kooperation mit Claude Sonnet · Mistral Vibe · ChatGPT · Gemini</div>
   </div>
-
-  <div class="footer">
-    <div class="footer-name">Verlag von Bedeutung</div>
-    <div class="footer-adresse">Unabhängiger Wissenschaftsverlag · Zürich · Schweiz · 2026</div>
-    <div class="footer-formel">β* = D/(D+1)</div>
-    <div class="footer-meta">33 Domains · 17 Grössenordnungen · Theorie: CC BY 4.0</div>
-    <div class="footer-mail">verlag-von-bedeutung@mailbox.org</div>
-    <div class="footer-copy">© 2026 Karlo Beyer · Verlag von Bedeutung · Zürich</div>
-  </div>
-
 </div>
+
+<script>
+/* =========================================================
+   STERNENFELD mit 3D-Tiefe + Parallax + Supernova + Meteor
+   ========================================================= */
+
+// feiner Lichtpunkt; Spikes nur wenn der Stern gerade aufleuchtet (spike 0..1)
+function drawSparkle(ctx, x, y, r, alpha, hue, rot, spike){
+  ctx.save();
+  ctx.translate(x,y);
+  ctx.globalAlpha = alpha;
+  ctx.globalCompositeOperation='screen';
+
+  // kleiner heisser Kern (immer)
+  const core = ctx.createRadialGradient(0,0,0, 0,0,r*1.6);
+  core.addColorStop(0,  `rgba(255,255,255,${alpha})`);
+  core.addColorStop(0.5,`hsla(${hue},70%,90%,${0.7*alpha})`);
+  core.addColorStop(1,  `hsla(${hue},70%,85%,0)`);
+  ctx.fillStyle=core;
+  ctx.beginPath(); ctx.arc(0,0,r*1.6,0,Math.PI*2); ctx.fill();
+
+  // Spikes + Spektrum-Aura nur beim Aufleuchten, skaliert mit spike
+  if(spike>0.02){
+    // zarte Regenbogen-Aura
+    const aura = ctx.createRadialGradient(0,0,0, 0,0,r*3);
+    aura.addColorStop(0,   `hsla(${hue},90%,88%,${0.22*spike*alpha})`);
+    aura.addColorStop(0.4, `hsla(${(hue+60)%360},95%,70%,${0.12*spike*alpha})`);
+    aura.addColorStop(0.7, `hsla(${(hue+180)%360},95%,68%,${0.07*spike*alpha})`);
+    aura.addColorStop(1,   `hsla(${hue},90%,80%,0)`);
+    ctx.fillStyle=aura;
+    ctx.beginPath(); ctx.arc(0,0,r*3,0,Math.PI*2); ctx.fill();
+
+    // ein feines, spitzes Kreuz
+    ctx.rotate(rot||0);
+    const len=r*(2.2+3.5*spike), wide=r*0.16;
+    ctx.fillStyle=`hsla(${hue},50%,99%,${spike*alpha})`;
+    ctx.beginPath();
+    ctx.moveTo(0,-len); ctx.lineTo(wide,0); ctx.lineTo(0,len); ctx.lineTo(-wide,0); ctx.closePath();
+    ctx.moveTo(-len,0); ctx.lineTo(0,wide); ctx.lineTo(len,0); ctx.lineTo(0,-wide); ctx.closePath();
+    ctx.fill();
+  }
+  ctx.restore();
+}
+
+function makeLayer(canvasId, count, rMin, rMax, twinkle, steady){
+  const cv=document.getElementById(canvasId);
+  const ctx=cv.getContext('2d');
+  let stars=[], W=0,H=0, dpr=Math.min(window.devicePixelRatio||1,2);
+  function resize(){
+    W=cv.clientWidth; H=cv.clientHeight;
+    cv.width=W*dpr; cv.height=H*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+    stars=[];
+    for(let i=0;i<count;i++){
+      // Sterne bevorzugt an den Rändern (Sternenmeer links/rechts), Mitte lichter
+      let x;
+      if(steady){
+        x = Math.random()*W;              // gleichmässig über den ganzen Himmel
+      } else {
+        const edge=Math.random();
+        if(edge<0.42) x=Math.random()*W*0.28;               // linkes Meer
+        else if(edge<0.84) x=W*0.72+Math.random()*W*0.28;   // rechtes Meer
+        else x=Math.random()*W;                              // vereinzelt überall
+      }
+      // Farbe: überwiegend blau-violett, ab und zu ein warmer/goldener Ton
+      let hue = 200+Math.random()*70;                 // 200..270 bläulich-violett
+      if(Math.random()<0.16) hue = 35+Math.random()*20; // seltene goldene Sterne
+      stars.push({
+        x, y:Math.random()*H,
+        r:rMin+Math.random()*(rMax-rMin),
+        hue,
+        ph: Math.random()*Math.PI*2,
+        sp: 0.6+Math.random()*1.4,
+        rot: Math.random()*Math.PI,           // eigene Ausrichtung
+        rsp: (Math.random()-0.5)*0.0002,       // ganz langsames Eigendrehen
+        hasSpike: Math.random()<0.28           // nur wenige leuchten je mit Spikes auf
+      });
+    }
+  }
+  function render(t){
+    ctx.clearRect(0,0,W,H);
+    for(const s of stars){
+      if(steady){
+        // ruhige Grundschicht: viele klare, kleine Sternpunkte, sanftes Atmen
+        const br = 0.55 + 0.16*Math.sin(t*0.0004*s.sp + s.ph);
+        ctx.save();
+        ctx.globalAlpha = br;
+        ctx.globalCompositeOperation='screen';
+        // knackiger heller Kern
+        ctx.fillStyle = `hsla(${s.hue},40%,98%,1)`;
+        ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, Math.PI*2); ctx.fill();
+        // ganz feiner Hof
+        const g = ctx.createRadialGradient(s.x,s.y,0, s.x,s.y,s.r*2.4);
+        g.addColorStop(0, `hsla(${s.hue},60%,92%,0.5)`);
+        g.addColorStop(1, `hsla(${s.hue},60%,85%,0)`);
+        ctx.fillStyle=g;
+        ctx.beginPath(); ctx.arc(s.x, s.y, s.r*2.4, 0, Math.PI*2); ctx.fill();
+        ctx.restore();
+        continue;
+      }
+      let a=0.55, tw=0.5;
+      if(twinkle){
+        tw = 0.5*Math.sin(t*0.0007*s.sp + s.ph) + 0.5*Math.sin(t*0.0013*s.sp + s.ph*1.7);
+        tw = Math.abs(tw);
+        a = 0.28 + 0.5*tw;
+      }
+      // Spikes nur bei wenigen Sternen und nur im hellen Moment (oberes Drittel des Funkelns)
+      let spike = 0;
+      if(s.hasSpike && tw>0.82){ spike = (tw-0.82)/0.18; }
+      const rot = s.rot + t*s.rsp;
+      drawSparkle(ctx, s.x, s.y, s.r, a, s.hue, rot, spike);
+    }
+  }
+  resize();
+  window.addEventListener('resize', resize);
+  return render;
+}
+
+// ruhige Grundschicht: viele feine, immer sichtbare Sternchen
+// ruhige Grundschicht: dichtes Sternenmeer aus vielen feinen Punkten
+const dustR = makeLayer('cdust', 1100, 0.35, 0.8, false, true);
+// drei dynamische Ebenen mit zunehmender Grösse/Helligkeit (näher = grösser)
+const farR  = makeLayer('cfar', 90, 0.35, 0.7, true);
+const midR  = makeLayer('cmid', 44, 0.5, 1.0, true);
+const nearR = makeLayer('cnear', 20, 0.8, 1.5, true);
+
+// ---- Parallax beim Scrollen ----
+const far=document.getElementById('far'), mid=document.getElementById('mid'), near=document.getElementById('near');
+let scrollY=0, targetY=0;
+window.addEventListener('scroll', ()=>{ targetY=window.scrollY; }, {passive:true});
+
+// sanfte Zeiger-Drift für organische Tiefe
+let driftX=0, driftY=0, targetDriftX=0, targetDriftY=0;
+window.addEventListener('pointermove', (e)=>{
+  targetDriftX = (e.clientX/window.innerWidth  - 0.5) * 2;   // -1..1
+  targetDriftY = (e.clientY/window.innerHeight - 0.5) * 2;
+}, {passive:true});
+
+// kombinierte, GPU-freundliche Transform je Ebene (translate3d + minimaler Zoom)
+function setLayer(el, dy, dx, dyd, scale){
+  el.style.transform = `translate3d(${dx}px, ${-dy + dyd}px, 0) scale(${scale})`;
+}
+
+// ---- Meteore + Supernovae auf FX-Canvas ----
+const fx=document.getElementById('fx'); const fxc=fx.getContext('2d');
+let FW,FH,fdpr=Math.min(window.devicePixelRatio||1,2);
+function fxResize(){ FW=window.innerWidth; FH=window.innerHeight; fx.width=FW*fdpr; fx.height=FH*fdpr; fxc.setTransform(fdpr,0,0,fdpr,0,0);
+  fx.style.position='fixed'; fx.style.inset='0'; fx.style.width='100%'; fx.style.height='100%'; fx.style.pointerEvents='none'; }
+fxResize(); window.addEventListener('resize', fxResize);
+
+let meteors=[], supernovae=[];
+function spawnMeteor(){
+  // von oben-rechts nach unten-links, in den Rand-Zonen
+  const fromRight=Math.random()<0.5;
+  const x = fromRight ? FW*(0.75+Math.random()*0.25) : FW*(Math.random()*0.25);
+  meteors.push({x, y:-40, vx:(fromRight?-1:1)*(2+Math.random()*2), vy:3+Math.random()*2,
+    len:80+Math.random()*70, life:0, max:120});
+}
+function spawnSupernova(){
+  const edge=Math.random()<0.5;
+  const x = edge ? FW*(0.05+Math.random()*0.2) : FW*(0.75+Math.random()*0.2);
+  const y = FH*(0.15+Math.random()*0.7);
+  supernovae.push({x,y,life:0,max:180, r:2+Math.random()*2, hue:200+Math.random()*80});
+}
+// subtil, nicht zu häufig
+setInterval(()=>{ if(Math.random()<0.5) spawnMeteor(); }, 6000);
+setInterval(()=>{ if(Math.random()<0.6) spawnSupernova(); }, 9000);
+
+function fxRender(){
+  fxc.clearRect(0,0,FW,FH);
+  // Meteore
+  for(const m of meteors){
+    m.x+=m.vx; m.y+=m.vy; m.life++;
+    const a=Math.max(0,1-m.life/m.max);
+    const grad=fxc.createLinearGradient(m.x,m.y, m.x-m.vx*m.len/4, m.y-m.vy*m.len/4);
+    grad.addColorStop(0,`rgba(255,255,255,${a})`);
+    grad.addColorStop(1,`rgba(150,180,255,0)`);
+    fxc.strokeStyle=grad; fxc.lineWidth=1.6; fxc.lineCap='round';
+    fxc.beginPath(); fxc.moveTo(m.x,m.y); fxc.lineTo(m.x-m.vx*m.len/4, m.y-m.vy*m.len/4); fxc.stroke();
+  }
+  meteors=meteors.filter(m=>m.life<m.max && m.y<FH+60);
+  // Supernovae: langsames Aufleuchten + Verblassen mit Strahlenkranz
+  for(const s of supernovae){
+    s.life++;
+    const p=s.life/s.max;                 // 0..1
+    const a=Math.sin(p*Math.PI);          // rein/raus
+    const R=s.r*(1+p*6);
+    const g=fxc.createRadialGradient(s.x,s.y,0, s.x,s.y,R*4);
+    g.addColorStop(0,`hsla(${s.hue},70%,95%,${a})`);
+    g.addColorStop(0.3,`hsla(${s.hue},70%,80%,${a*0.4})`);
+    g.addColorStop(1,`hsla(${s.hue},70%,80%,0)`);
+    fxc.fillStyle=g; fxc.beginPath(); fxc.arc(s.x,s.y,R*4,0,Math.PI*2); fxc.fill();
+    // feiner Kern
+    fxc.fillStyle=`hsla(${s.hue},30%,99%,${a})`;
+    fxc.beginPath(); fxc.arc(s.x,s.y,R*0.5,0,Math.PI*2); fxc.fill();
+  }
+  supernovae=supernovae.filter(s=>s.life<s.max);
+}
+
+// ---- Master-Loop ----
+const dust=document.getElementById('dust');
+function loop(t){
+  // edleres Parallax: träges, weiches Nachziehen mit mehr Tiefenstaffelung
+  scrollY += (targetY-scrollY)*0.045;
+  // sanfte Maus-/Zeiger-Drift für lebendige Tiefe (ganz dezent)
+  driftX += (targetDriftX-driftX)*0.03;
+  driftY += (targetDriftY-driftY)*0.03;
+
+  setLayer(dust, scrollY*0.03,  driftX*0.4,  driftY*0.3,  1.0);
+  setLayer(far,  scrollY*0.07,  driftX*0.8,  driftY*0.6,  1.004);
+  setLayer(mid,  scrollY*0.15,  driftX*1.6,  driftY*1.1,  1.010);
+  setLayer(near, scrollY*0.30,  driftX*3.0,  driftY*2.0,  1.020);
+
+  dustR(t); farR(t); midR(t); nearR(t);
+  fxRender();
+  requestAnimationFrame(loop);
+}
+requestAnimationFrame(loop);
+
+/* =========================================================
+   Sprachumschalter DE / EN
+   ========================================================= */
+function setLang(lang){
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-'+lang+']').forEach(function(el){
+    el.innerHTML = el.getAttribute('data-'+lang);
+  });
+  document.getElementById('btn-de').classList.toggle('active', lang==='de');
+  document.getElementById('btn-en').classList.toggle('active', lang==='en');
+  try{ localStorage.setItem('vvb-lang', lang); }catch(e){}
+}
+/* Startsprache: gespeicherte Wahl > Browsersprache > DE */
+(function(){
+  var saved=null; try{ saved=localStorage.getItem('vvb-lang'); }catch(e){}
+  var lang = saved || (navigator.language && navigator.language.slice(0,2)==='en' ? 'en' : 'de');
+  setLang(lang);
+})();
+</script>
 </body>
 </html>
