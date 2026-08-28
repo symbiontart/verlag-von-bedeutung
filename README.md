@@ -6,38 +6,34 @@ Independent publisher, founded 2026 in Zurich. Owner and author: Karlo Beyer. No
 🌐 Website: https://symbiontart.github.io/verlag-von-bedeutung/
 ✉️ Kontakt / Contact: verlag-von-bedeutung@mailbox.org
 📍 Zürich · Schweiz · 2026
----
 Die Frage / The question
 > Wie ist Information im Raum verteilt und wie definieren wir Bedeutung?
 >
 > *How is information distributed in space, and how do we define meaning?*
-Drei Bücher. Eine Frage. Was uns als Spezies ausmacht. Was nach uns kommt. Und worin beides stattfindet.
-Three books. One question. What defines us as a species. What comes after us. And where both take place.
+Drei Bücher. Eine Frage. Was uns als Spezies ausmacht. Was nach uns kommt. Und wohin beides führt.
+Three books. One question. What defines us as a species. What comes after us. And where both are heading.
 ---
 Die drei Bücher / The three books
 Universalica — Der erste Kontakt
 Der erste Kontakt ist ein Signal
-Mit wem werden wir es zu tun bekommen, woran erkennen wir eine Botschaft, und was macht der Kontakt mit unserem Verständnis von Überleben? Die Evolution legt nahe, dass universelle Gesetze ähnliche Lebensformen schaffen und wir das Fremde in Teilen wiedererkennen würden. Ein ungewisser Teil jedoch wird der exotische Bereich sein, für den wir keine Kategorie haben. Doch womöglich sprechen am Ende nicht wir mit den Fremden, sondern unsere Maschinen mit ihren.
-Who will we be dealing with, how would we recognise a message, and what does contact do to our understanding of survival? Evolution suggests that universal laws produce similar forms of life, and that we would recognise part of the alien. Another part will be exotic, with no category to hold it. In the end it may not be us talking to them, but our machines talking to theirs.
+Was wäre, wenn die erste extraterrestrische Begegnung mit einem Signal beginnt? Woran erkennen wir eine Botschaft, mit wem werden wir es zu tun bekommen? Die Evolution legt nahe, dass universelle Gesetze ähnliche Lebensformen schaffen und wir das Fremde in Teilen wiedererkennen würden. Doch womöglich sprechen am Ende nicht wir mit den Fremden, sondern ihre KI mit unserer.
+What if the first extraterrestrial encounter begins with a signal? How would we recognise a message — and who will we be dealing with? Evolution suggests that universal laws produce similar forms of life, and that we would recognise the alien in part. Yet in the end it may not be us talking to the strangers, but their AI talking to ours.
 `Neuauflage in Kürze / New edition forthcoming`
 Droidica — Technosphären
-Steigende Komplexität ist kein Zufall, sie ist der Impuls. Aus Biosphären gehen Technosphären hervor, und sie überdauern ihre Erzeuger. Keine Bedrohung, sondern das nächste Kapitel einer Geschichte, die mit dem ersten Lebewesen begann. Die Frage ist nicht, wie wir unsere Nachfolger kontrollieren — sondern was wir ihnen mitgeben.
-Rising complexity is not chance, it is the impulse. Technospheres emerge from biospheres and outlast their creators. Not a threat, but the next chapter of a story that began with the first living organism. The question is not how we control our successors — but what we pass on to them.
+Steigende Komplexität ist kein Zufall — sie ist der Impuls. Wir folgen diesem Prinzip bis an seine äusserste Konsequenz: Technosphären sind keine Bedrohung, sie sind das nächste Kapitel einer Geschichte, die mit dem ersten biologischen Lebewesen begann. Die nächste dominante Spezies wird nicht geboren — sie wird gebaut.
+Rising complexity is not chance — it is the impulse. We follow this principle to its utmost consequence: technospheres are not a threat, they are the next chapter of a story that began with the first living organism. The next dominant species will not be born — it will be built.
 `In Vorbereitung 2026 / In preparation 2026`
 Cosmologica — Das offene Universum
-Dem Rätsel des kosmischen Netzwerks auf den Grund gegangen, mit einigen Überraschungen: Der Kosmos ist noch jung, seine Netzwerkstrukturen findet man in allen Grössenordnungen und System- und Informationstheorie folgen universellen Prinzipien. Daraus folgt: Für die Zeit vor dem Urknall stehen vier Szenarien im Raum und die endgültige Erkenntnis darüber erreicht uns schon 2033.
-To the bottom of the cosmic network's riddle, with a few surprises: the cosmos is still young, its network structures appear at every order of magnitude, and systems and information theory follow universal principles. It follows that four scenarios remain open for the time before the Big Bang — and the decisive answer reaches us as early as 2033.
+Dem Rätsel des kosmischen Netzwerks auf den Grund gegangen — mit drei Überraschungen: Der Kosmos ist noch jung. Ein einziges Spektrum durchzieht alles — vom kosmischen Netz über Gehirne bis zur Sprache. Und das Universum ist älter als sein Urknall: Etwas war davor, und es hat Spuren hinterlassen. Dieses Buch liest sie.
+To the bottom of the riddle of the cosmic network — with three surprises: the cosmos is still young. A single spectrum runs through everything — from the cosmic web through brains to language. And the universe is older than its Big Bang: something was there before, and it left traces. This book reads them.
 `3. Auflage lieferbar · Deutsch · English`
 `Softcover DE: 978-3-384-98143-1` · `E-Book DE: 978-3-384-98156-1` · `E-Book EN: 979-8-233-99128-8`
----
 Wie wir arbeiten / How we work
 Jedes unserer Bücher entsteht im Dialog zwischen einem Menschen und künstlichen Intelligenzen. Hier sind sie jedoch eher Gegenüber statt Werkzeug. Denn Mustererkennung reicht dorthin, wo menschliche Intuition nicht mehr genügt: in grosse Datenmengen, über Fachgrenzen hinweg, in Systeme, die sich durch multiple Erscheinung zeigen.
 Was dabei entsteht, hätte keine der beteiligten Seiten allein formuliert. Das ist kein Mangel — es ist die Methode.
-Unsere Werke sind Sachbücher. Belegt, wo Daten vorliegen. Konsequent weitergedacht, wo sie enden würden. Belegte Extrapolation von Beobachtungen bis dahin, wo es unberechenbar wird. Kein Genre. Eine Symbiose.
+Unsere Werke sind Sachbücher. Belegt, wo Daten vorliegen. Konsequent weitergedacht, wo sie enden würden. Kein Genre. Eine Symbiose.
 Every book emerges in dialogue between a human and artificial intelligences — as counterparts rather than tools. What results would not have been written by either side alone. That is not a shortcoming — it is the method. Documented where data exists, extrapolated where the data ends. No genre. A symbiosis.
----
 Bezug / Availability
 Print und E-Book Deutsch über tredition · Print Englisch über tredition · E-Book Englisch über Draft2Digital.
 Print and e-book in German via tredition · print in English via tredition · e-book in English via Draft2Digital.
----
 Schlüsselbegriffe / Keywords: Karlo Beyer, Verlag von Bedeutung, Universalica, Droidica, Cosmologica, Erstkontakt, first contact, SETI, Exosoziologie, Technosphäre, technosphere, künstliche Intelligenz, artificial intelligence, Kosmologie, cosmology, kosmisches Netz, cosmic web, Informationstheorie, information theory, Komplexität, complexity, Systemtheorie, systems theory, Bewusstsein, consciousness, Populärwissenschaft, popular science, Zürich, Schweiz.
