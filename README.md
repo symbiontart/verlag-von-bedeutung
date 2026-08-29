@@ -24,15 +24,15 @@ Steigende Komplexität ist kein Zufall — sie ist der Impuls. Wir folgen diesem
 Rising complexity is not chance — it is the impulse. We follow this principle to its utmost consequence: technospheres are not a threat, they are the next chapter of a story that began with the first living organism. The next dominant species will not be born — it will be built.
 `In Vorbereitung 2026 / In preparation 2026`
 Cosmologica — Das offene Universum
-Dem Rätsel des kosmischen Netzwerks auf den Grund gegangen — mit drei Überraschungen: Der Kosmos ist noch jung. Ein einziges Spektrum durchzieht alles — vom kosmischen Netz über Gehirne bis zur Sprache. Und das Universum ist älter als sein Urknall: Etwas war davor, und es hat Spuren hinterlassen. Dieses Buch liest sie.
-To the bottom of the riddle of the cosmic network — with three surprises: the cosmos is still young. A single spectrum runs through everything — from the cosmic web through brains to language. And the universe is older than its Big Bang: something was there before, and it left traces. This book reads them.
+Dem Rätsel des kosmischen Netzwerks auf den Grund gegangen — mit drei Überraschungen: Der Kosmos ist noch jung. Ein einziges Spektrum durchzieht alles — vom kosmischen Netz über Gehirne bis zur Sprache. Und das Universum ist älter als sein Urknall: Etwas war vor den Grenzen des Sichtbaren, und es hat Spuren hinterlassen.
+To the bottom of the riddle of the cosmic network — with three surprises: the cosmos is still young. A single spectrum runs through everything — from the cosmic web through brains to language. And the universe is older than its Big Bang: something was there before the boundaries of the visible, and it left traces.
 `3. Auflage lieferbar · Deutsch · English`
-`Softcover DE: 978-3-384-98143-1` · `E-Book DE: 978-3-384-98156-1` · `E-Book EN: 979-8-233-99128-8`
+`Softcover DE: 978-3-384-98143-1` · `E-Book DE: 978-3-384-98156-1` · `Softcover EN: 978-3-384-98602-3` · `E-Book EN: 979-8-233-99128-8`
 Wie wir arbeiten / How we work
-Jedes unserer Bücher entsteht im Dialog zwischen einem Menschen und künstlichen Intelligenzen. Hier sind sie jedoch eher Gegenüber statt Werkzeug. Denn Mustererkennung reicht dorthin, wo menschliche Intuition nicht mehr genügt: in grosse Datenmengen, über Fachgrenzen hinweg, in Systeme, die sich durch multiple Erscheinung zeigen.
+Jedes unserer Bücher entsteht im Dialog zwischen einem Menschen und künstlichen Intelligenzen. Hier sind sie jedoch eher Partner statt Gegenüber. Denn Mustererkennung reicht dorthin, wo menschliche Intuition nicht mehr genügt: in Datenmengen, die kein Mensch mehr sichten kann. Quer durch alle Disziplinen. Bis zu Strukturen, die niemand zuvor gesehen hat.
 Was dabei entsteht, hätte keine der beteiligten Seiten allein formuliert. Das ist kein Mangel — es ist die Methode.
 Unsere Werke sind Sachbücher. Belegt, wo Daten vorliegen. Konsequent weitergedacht, wo sie enden würden. Kein Genre. Eine Symbiose.
-Every book emerges in dialogue between a human and artificial intelligences — as counterparts rather than tools. What results would not have been written by either side alone. That is not a shortcoming — it is the method. Documented where data exists, extrapolated where the data ends. No genre. A symbiosis.
+Every book emerges in dialogue between a human and artificial intelligences — as partners rather than counterparts. What results would not have been written by either side alone. That is not a shortcoming — it is the method. Documented where data exists, extrapolated where the data ends. No genre. A symbiosis.
 Bezug / Availability
 Print und E-Book Deutsch über tredition · Print Englisch über tredition · E-Book Englisch über Draft2Digital.
 Print and e-book in German via tredition · print in English via tredition · e-book in English via Draft2Digital.
