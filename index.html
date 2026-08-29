@@ -129,30 +129,29 @@
       .meta-top { font-size: 0.62rem; letter-spacing: 0.14em; }
       .hdr-name { font-size: 1.6rem; }
     }
-  
-  /* ---- Mobil: Feinheit behalten, Kontrast anheben (29.8.2026) ---- */
-  @media (max-width: 600px) {
-    .band-row, .bezug-row { border-bottom: 1px solid #c2c2c2; }
-    .methode-bar, .symbiose-bar { border-top: 1px solid #b8b8b8; border-bottom: 1px solid #b8b8b8; }
-    .bottom-cols { border-top: 1px solid #b8b8b8; }
-    .divider-thick { border-top-width: 2px; }
-    hr { border-color: #b8b8b8; }
-    .bezug-links a { border-bottom: 1px solid #999; color: #444; }
-    .reihe-label { font-size: 1.25rem; }
-    .meta-top, .nav { font-size: 0.7rem; color: #666; }
-    .hdr-sub { font-size: 0.72rem; color: #555; }
-    .band-meta { font-size: 0.7rem; color: #666; }
-    .band-avail { font-size: 0.7rem; color: #666; }
-    .methode-sub, .symbiose-sub { font-size: 0.72rem; color: #666; }
-    .bezug-links { font-size: 0.72rem; color: #555; }
-    .col-titel { font-size: 0.7rem; color: #333; }
-    .neu-zitat-quelle { font-size: 0.7rem; color: #555; }
-    .sek-hdr-ornament { color: #666; }
-    .qr-link, .qr-link a { font-size: 0.76rem; color: #555; }
-    .footer-adresse, .footer-mail { font-size: 0.7rem; color: #666; }
-    .footer-copy { font-size: 0.66rem; color: #777; }
+  /* ---- Mobil-Kontrast v3: fein bleibt fein, aber dunkel (29.8.2026) ---- */
+  @media (max-width: 768px) {
+    .band-row, .bezug-row { border-bottom: 1px solid #555 !important; }
+    .methode-bar, .symbiose-bar { border-top: 1px solid #555 !important; border-bottom: 1px solid #555 !important; }
+    .bottom-cols { border-top: 1px solid #555 !important; }
+    .sek-hdr-line { height: 1px !important; }
+    .divider-thick { border-top-width: 2px !important; }
+    hr { border: none !important; border-top: 1px solid #555 !important; }
+    .lang-switch a { border-color: #555 !important; }
+    .meta-top, .nav { font-size: 0.7rem !important; color: #444 !important; border-color: #555 !important; }
+    .hdr-sub { font-size: 0.72rem !important; color: #444 !important; }
+    .band-meta, .band-avail { font-size: 0.7rem !important; color: #4a4a4a !important; }
+    .methode-sub, .symbiose-sub { font-size: 0.72rem !important; color: #4a4a4a !important; }
+    .bezug-links { font-size: 0.72rem !important; color: #3a3a3a !important; }
+    .bezug-links a { border-bottom: 1px solid #555 !important; color: #222 !important; }
+    .col-titel { font-size: 0.7rem !important; color: #1a1a1a !important; border-color: #555 !important; }
+    .neu-zitat-quelle { font-size: 0.7rem !important; color: #444 !important; }
+    .sek-hdr-ornament { color: #444 !important; }
+    .qr-link, .qr-link a { font-size: 0.76rem !important; color: #3a3a3a !important; }
+    .footer-adresse, .footer-mail { font-size: 0.7rem !important; color: #4a4a4a !important; }
+    .footer-copy { font-size: 0.66rem !important; color: #555 !important; }
   }
-</style>
+  </style>
 </head>
 <body>
 
