@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="format-detection" content="telephone=no" />
   <title>Verlag von Bedeutung — Zurich</title>
-  <meta name="description" content="Verlag von Bedeutung, Zurich. Non-fiction that keeps thinking where measurement ends. Written in dialogue between a human and several artificial intelligences." />
+  <meta name="description" content="Verlag von Bedeutung, Zurich. Non-fiction that continues thinking where measurement ends. Written in dialogue between a human and several artificial intelligences." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&amp;family=Raleway:wght@300;400;600;700&amp;display=swap" rel="stylesheet" />
 
@@ -64,9 +64,9 @@
 
     .divider-thick { border: none; border-top: 1.5px solid #1a1a1a; margin: 1.2rem 0; }
     .reihe-intro { text-align: center; padding: 1rem 0 0.8rem; }
-    .reihe-label { font-family: 'Raleway', sans-serif; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #1a1a1a; margin-bottom: 0.6rem; }
+    .reihe-label { font-family: 'Raleway', sans-serif; font-size: 2.1rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #1a1a1a; margin-bottom: 0.6rem; }
     .reihe-frage { font-size: 1.15rem; font-weight: 700; line-height: 1.5; margin-bottom: 0.4rem; }
-    .reihe-ant { font-family: 'Raleway', sans-serif; font-size: 0.85rem; font-weight: 400; color: #666; font-style: italic; }
+    .reihe-ant { font-family: 'Raleway', sans-serif; font-size: 0.95rem; font-weight: 400; color: #666; font-style: italic; }
     .sek-hdr { display: flex; align-items: center; gap: 12px; margin: 1rem 0 0.8rem; }
     .sek-hdr-line { flex: 1; height: 0.5px; background: #1a1a1a; }
     .sek-hdr-ornament { font-family: 'Lora', serif; font-size: 0.8rem; font-style: italic; color: #888; white-space: nowrap; }
@@ -129,7 +129,29 @@
       .meta-top { font-size: 0.62rem; letter-spacing: 0.14em; }
       .hdr-name { font-size: 1.6rem; }
     }
-  </style>
+  
+  /* ---- Mobil: Feinheit behalten, Kontrast anheben (29.8.2026) ---- */
+  @media (max-width: 600px) {
+    .band-row, .bezug-row { border-bottom: 1px solid #c2c2c2; }
+    .methode-bar, .symbiose-bar { border-top: 1px solid #b8b8b8; border-bottom: 1px solid #b8b8b8; }
+    .bottom-cols { border-top: 1px solid #b8b8b8; }
+    .divider-thick { border-top-width: 2px; }
+    hr { border-color: #b8b8b8; }
+    .bezug-links a { border-bottom: 1px solid #999; color: #444; }
+    .meta-top, .nav { font-size: 0.7rem; color: #666; }
+    .hdr-sub { font-size: 0.72rem; color: #555; }
+    .band-meta { font-size: 0.7rem; color: #666; }
+    .band-avail { font-size: 0.7rem; color: #666; }
+    .methode-sub, .symbiose-sub { font-size: 0.72rem; color: #666; }
+    .bezug-links { font-size: 0.72rem; color: #555; }
+    .col-titel { font-size: 0.7rem; color: #333; }
+    .neu-zitat-quelle { font-size: 0.7rem; color: #555; }
+    .sek-hdr-ornament { color: #666; }
+    .qr-link, .qr-link a { font-size: 0.76rem; color: #555; }
+    .footer-adresse, .footer-mail { font-size: 0.7rem; color: #666; }
+    .footer-copy { font-size: 0.66rem; color: #777; }
+  }
+</style>
 </head>
 <body>
 
@@ -146,26 +168,26 @@
     <a href="../">DE</a><a href="#" class="active">EN</a>
   </div>
 
-  <div class="meta-top">Thinking and publishing at the edge of the describable</div>
+  <div class="meta-top">How is information distributed in space?</div>
 
   <div class="hdr">
     <div class="hdr-name">Verlag von Bedeutung</div>
     <div class="hdr-sub">Insight · Structure · Future</div>
   </div>
 
-  <div class="nav">Cosmology · Information Science · Systems Theory · Complexity Research · Spectral Analysis</div>
+  <div class="nav">Cosmology · Information Sciences · Systems Theory · Complexity Research · Spectral Analysis</div>
 
   <div class="neu-box">
     <div class="neu-label">The Publisher</div>
-    <div class="neu-titel">We think at the <em>edge of the possible.</em></div>
+    <div class="neu-titel">We think at the <em>edge of what can be described.</em></div>
     <div class="neu-cols">
       <div class="neu-text">
-        <p>Each of our books emerges in dialogue between a human and artificial intelligences. Here they are counterparts rather than tools.</p>
-        <p>Pattern recognition reaches where human intuition no longer suffices: into large bodies of data, across disciplinary boundaries, into systems that reveal themselves through multiple appearances.</p>
+        <p>Each of our books emerges in dialogue between a human and artificial intelligences. Here, however, they are counterparts rather than tools.</p>
+        <p>Pattern recognition reaches where human intuition no longer suffices: into data no human can sift through anymore. Across every discipline. To structures no one has seen before.</p>
       </div>
       <div class="neu-zitat-col">
-        <div class="neu-zitat">What emerges would not have been written by either side alone. This is no shortcoming — it is the method.</div>
-        <div class="neu-zitat">Our works are non-fiction. Documented where data exists. Followed through where the data would end.</div>
+        <div class="neu-zitat">What emerges would not have been written by either side alone. That is not a shortcoming — it is the method.</div>
+        <div class="neu-zitat">Our works are non-fiction. Documented where data exists. Consistently thought onward where it ends.</div>
         <div class="neu-zitat">No genre. A symbiosis.</div>
       </div>
     </div>
@@ -174,9 +196,8 @@
   <hr class="divider-thick" />
 
   <div class="reihe-intro">
-    <div class="reihe-label">Three books. One question.</div>
-    <div class="reihe-frage">How is information distributed in space,<br />and how do we define meaning?</div>
-    <div class="reihe-ant">What defines us as a species. What comes after us. And where both take place.</div>
+    <div class="reihe-label">Questions of Our Time</div>
+    <div class="reihe-ant">What defines us as a species. What comes after us. And where both are heading.</div>
   </div>
 
   <div class="sek-hdr">
@@ -189,16 +210,16 @@
     <div>
       <div class="band-name">Universalica</div>
       <div class="band-ut">First contact is a signal</div>
-      <div class="band-text">Who will we be dealing with, how would we recognize a message, and what does contact do to our understanding of survival? Evolution suggests that universal laws produce similar forms of life, and that we would recognize the alien in part. An uncertain part, however, will be the exotic range for which we have no category. Yet in the end it may not be us talking to them, but our machines talking to theirs.</div>
+      <div class="band-text">What if the first extraterrestrial encounter begins with a signal? How would we recognise a message — and who will we be dealing with? Evolution suggests that universal laws produce similar forms of life, and that we would recognise the alien in part. Yet in the end it may not be us talking to the strangers, but their AI talking to ours.</div>
     </div>
-    <div class="band-meta">New edition shortly</div>
+    <div class="band-meta">New edition forthcoming</div>
   </div>
 
   <div class="band-row">
     <div>
       <div class="band-name">Droidica</div>
       <div class="band-ut">Technospheres</div>
-      <div class="band-text">Rising complexity is no accident, it is the impulse. Technospheres emerge from biospheres, and they outlast their creators. No threat, but the next chapter of a story that began with the first living organism. The question is not how we control our successors — but what we pass on to them.</div>
+      <div class="band-text">Rising complexity is not chance — it is the impulse. We follow this principle to its utmost consequence: technospheres are not a threat, they are the next chapter of a story that began with the first living organism. The next dominant species will not be born — it will be built.</div>
     </div>
     <div class="band-meta">In preparation<span class="band-avail">2026</span></div>
   </div>
@@ -207,39 +228,34 @@
     <div>
       <div class="band-name">Cosmologica</div>
       <div class="band-ut">The Open Universe</div>
-      <div class="band-text">An investigation into the riddle of the cosmic network, with a few surprises: the cosmos is still young, its network structures appear at every order of magnitude, and systems and information theory follow universal principles. It follows that four scenarios remain open for the time before the Big Bang — and the decisive answer reaches us as early as 2033.</div>
+      <div class="band-text">To the bottom of the riddle of the cosmic network — with three surprises: the cosmos is still young. A single spectrum runs through everything — from the cosmic web through brains to language. And the universe is older than its Big Bang: something was there before the boundaries of the visible, and it left traces.</div>
     </div>
-    <div class="band-meta">3rd edition available<span class="band-avail">German · English</span></div>
+    <div class="band-meta">3rd edition available<span class="band-avail">Deutsch · English</span></div>
   </div>
 
   <div class="methode-bar">
-    <div class="methode-text">We write non-fiction that comes closer to the future than anything before it.</div>
-    <div class="methode-sub">Documented extrapolation from observation up to the point where it becomes unpredictable</div>
+    <div class="methode-text">We write non-fiction that comes closer to the future than anything before.</div>
   </div>
 
   <div class="bottom-cols">
     <div>
       <div class="col-titel">About the Publisher</div>
-      <p class="col-text">Founded 2026 in Zurich, Switzerland. Verlag von Bedeutung is independent; its owner and author is Karlo Beyer.</p>
-      <p class="col-text">Our books are published in German and English, in print and as e-book.</p>
-      <p class="col-text">All major AI models take part in their making. Each book arises from the collaboration of several systems and the influence of a human decision.</p>
+      <p class="col-text">Founded 2026 in Zurich, Switzerland. Verlag von Bedeutung is independent; owner and author is Karlo Beyer.</p>
+      <p class="col-text">Our books are published in German and English, in print and as e-books.</p>
+      <p class="col-text">Several AI systems take part in the making. Each book emerges from the collaboration of digital language processing and human intuition.</p>
     </div>
     <div>
       <div class="col-titel">Where to Buy</div>
       <div class="bezug-row">
-        <div class="bezug-titel">Cosmologica — German, print</div>
+        <div class="bezug-titel">Cosmologica — German, Print &amp; E-Book</div>
         <div class="bezug-links"><a href="https://shop.tredition.com/booktitle/Cosmologica/W-403-051-762" target="_blank" rel="noopener">tredition</a></div>
       </div>
       <div class="bezug-row">
-        <div class="bezug-titel">Cosmologica — German, e-book</div>
-        <div class="bezug-links"><a href="https://shop.tredition.com/booktitle/Cosmologica/W-403-051-762" target="_blank" rel="noopener">tredition</a></div>
+        <div class="bezug-titel">Cosmologica — English, Print</div>
+        <div class="bezug-links"><a href="#" target="_blank" rel="noopener">tredition</a></div>
       </div>
       <div class="bezug-row">
-        <div class="bezug-titel">Cosmologica — English, print</div>
-        <div class="bezug-links"><a href="#">tredition</a></div>
-      </div>
-      <div class="bezug-row">
-        <div class="bezug-titel">Cosmologica — English, e-book</div>
+        <div class="bezug-titel">Cosmologica — English, E-Book</div>
         <div class="bezug-links"><a href="https://books2read.com/u/b5d781" target="_blank" rel="noopener">Draft2Digital</a></div>
       </div>
       <div class="bezug-row">
@@ -250,8 +266,8 @@
   </div>
 
   <div class="symbiose-bar">
-    <div class="symbiose-text">Every signal leaves an impression. Every consciousness has a depth. Meaning arises not in the sender and not in the receiver, but in the spectrum in between.</div>
-    <div class="symbiose-sub">Foundations of a universal communication</div>
+    <div class="symbiose-text">Every signal leaves an impression.<br />Every consciousness has a depth.<br />Meaning arises neither in the sender nor in the receiver,<br />but in the spectrum in between.</div>
+    <div class="symbiose-sub">Meaning = Information × Complexity · Foundations of universal communication</div>
   </div>
 
   <div class="footer">
@@ -577,6 +593,7 @@ function loop(t){
   requestAnimationFrame(loop);
 }
 requestAnimationFrame(loop);
+
 </script>
 </body>
 </html>
