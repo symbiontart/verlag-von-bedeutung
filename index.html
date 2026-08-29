@@ -64,7 +64,7 @@
 
     .divider-thick { border: none; border-top: 1.5px solid #1a1a1a; margin: 1.2rem 0; }
     .reihe-intro { text-align: center; padding: 1rem 0 0.8rem; }
-    .reihe-label { font-family: 'Raleway', sans-serif; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #1a1a1a; margin-bottom: 0.6rem; }
+    .reihe-label { font-family: 'Raleway', sans-serif; font-size: 2.1rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #1a1a1a; margin-bottom: 0.6rem; }
     .reihe-frage { font-size: 1.15rem; font-weight: 700; line-height: 1.5; margin-bottom: 0.4rem; }
     .reihe-ant { font-family: 'Raleway', sans-serif; font-size: 0.95rem; font-weight: 400; color: #666; font-style: italic; }
     .sek-hdr { display: flex; align-items: center; gap: 12px; margin: 1rem 0 0.8rem; }
@@ -129,7 +129,29 @@
       .meta-top { font-size: 0.62rem; letter-spacing: 0.14em; }
       .hdr-name { font-size: 1.6rem; }
     }
-  </style>
+  
+  /* ---- Mobil: Feinheit behalten, Kontrast anheben (29.8.2026) ---- */
+  @media (max-width: 600px) {
+    .band-row, .bezug-row { border-bottom: 1px solid #c2c2c2; }
+    .methode-bar, .symbiose-bar { border-top: 1px solid #b8b8b8; border-bottom: 1px solid #b8b8b8; }
+    .bottom-cols { border-top: 1px solid #b8b8b8; }
+    .divider-thick { border-top-width: 2px; }
+    hr { border-color: #b8b8b8; }
+    .bezug-links a { border-bottom: 1px solid #999; color: #444; }
+    .meta-top, .nav { font-size: 0.7rem; color: #666; }
+    .hdr-sub { font-size: 0.72rem; color: #555; }
+    .band-meta { font-size: 0.7rem; color: #666; }
+    .band-avail { font-size: 0.7rem; color: #666; }
+    .methode-sub, .symbiose-sub { font-size: 0.72rem; color: #666; }
+    .bezug-links { font-size: 0.72rem; color: #555; }
+    .col-titel { font-size: 0.7rem; color: #333; }
+    .neu-zitat-quelle { font-size: 0.7rem; color: #555; }
+    .sek-hdr-ornament { color: #666; }
+    .qr-link, .qr-link a { font-size: 0.76rem; color: #555; }
+    .footer-adresse, .footer-mail { font-size: 0.7rem; color: #666; }
+    .footer-copy { font-size: 0.66rem; color: #777; }
+  }
+</style>
 </head>
 <body>
 
@@ -161,7 +183,7 @@
     <div class="neu-cols">
       <div class="neu-text">
         <p>Each of our books emerges in dialogue between a human and artificial intelligences. Here, however, they are counterparts rather than tools.</p>
-        <p>Pattern recognition reaches where human intuition no longer suffices: into vast data, across disciplinary borders, into systems that reveal themselves through multiple appearances.</p>
+        <p>Pattern recognition reaches where human intuition no longer suffices: into data no human can sift through anymore. Across every discipline. To structures no one has seen before.</p>
       </div>
       <div class="neu-zitat-col">
         <div class="neu-zitat">What emerges would not have been written by either side alone. That is not a shortcoming — it is the method.</div>
@@ -187,7 +209,7 @@
   <div class="band-row">
     <div>
       <div class="band-name">Universalica</div>
-      <div class="band-ut">First Contact</div>
+      <div class="band-ut">First contact is a signal</div>
       <div class="band-text">What if the first extraterrestrial encounter begins with a signal? How would we recognise a message — and who will we be dealing with? Evolution suggests that universal laws produce similar forms of life, and that we would recognise the alien in part. Yet in the end it may not be us talking to the strangers, but their AI talking to ours.</div>
     </div>
     <div class="band-meta">New edition forthcoming</div>
@@ -206,7 +228,7 @@
     <div>
       <div class="band-name">Cosmologica</div>
       <div class="band-ut">The Open Universe</div>
-      <div class="band-text">To the bottom of the riddle of the cosmic network — with three surprises: the cosmos is still young. A single spectrum runs through everything — from the cosmic web through brains to language. And the universe is older than its Big Bang: something was there before, and it left traces. This book reads them.</div>
+      <div class="band-text">To the bottom of the riddle of the cosmic network — with three surprises: the cosmos is still young. A single spectrum runs through everything — from the cosmic web through brains to language. And the universe is older than its Big Bang: something was there before the boundaries of the visible, and it left traces.</div>
     </div>
     <div class="band-meta">3rd edition available<span class="band-avail">Deutsch · English</span></div>
   </div>
@@ -220,7 +242,7 @@
       <div class="col-titel">About the Publisher</div>
       <p class="col-text">Founded 2026 in Zurich, Switzerland. Verlag von Bedeutung is independent; owner and author is Karlo Beyer.</p>
       <p class="col-text">Our books are published in German and English, in print and as e-books.</p>
-      <p class="col-text">All major AI models take part in the making. Each book emerges from the collaboration of digital language processing and human intuition.</p>
+      <p class="col-text">Several AI systems take part in the making. Each book emerges from the collaboration of digital language processing and human intuition.</p>
     </div>
     <div>
       <div class="col-titel">Where to Buy</div>
@@ -230,7 +252,7 @@
       </div>
       <div class="bezug-row">
         <div class="bezug-titel">Cosmologica — English, Print</div>
-        <div class="bezug-links"><a href="https://shop.tredition.com/booktitle/Cosmologica/W-126-863-650" target="_blank" rel="noopener">tredition</a></div>
+        <div class="bezug-links"><a href="#" target="_blank" rel="noopener">tredition</a></div>
       </div>
       <div class="bezug-row">
         <div class="bezug-titel">Cosmologica — English, E-Book</div>
