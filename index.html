@@ -1,16 +1,16 @@
 <!DOCTYPE html>
+
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="color-scheme" content="only light" />
-  <meta name="format-detection" content="telephone=no" />
-  <title>Verlag von Bedeutung — Zürich</title>
-  <meta name="description" content="Verlag von Bedeutung, Zürich. Sachbücher, die dort weiterdenken, wo die Messung aufhört. Geschrieben im Dialog zwischen einem Menschen und mehreren künstlichen Intelligenzen." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&amp;family=Raleway:wght@300;400;600;700&amp;display=swap" rel="stylesheet" />
-
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="only light" name="color-scheme"/>
+<meta content="telephone=no" name="format-detection"/>
+<title>Verlag von Bedeutung — Zürich</title>
+<meta content="Verlag von Bedeutung, Zürich. Sachbücher, die dort weiterdenken, wo die Messung aufhört. Geschrieben im Dialog zwischen einem Menschen und mehreren künstlichen Intelligenzen." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&amp;family=Raleway:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body { margin: 0; padding: 0; }
     body {
@@ -158,132 +158,145 @@
   }
     :root { color-scheme: only light; }
   html { -webkit-text-size-adjust: 100%; }
-  </style>
+  
+.bezug-section { margin-bottom: 1.2em; }
+.bezug-group-label {
+  font-size: 0.68em;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #888;
+  border-bottom: 1px solid #333;
+  padding-bottom: 3px;
+  margin-bottom: 0.5em;
+}
+.bezug-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82em;
+}
+.bezug-table tr { border-bottom: 1px solid #222; }
+.bezug-table tr:last-child { border-bottom: none; }
+.bezug-band {
+  color: #ccc;
+  padding: 4px 8px 4px 0;
+  vertical-align: top;
+  width: 42%;
+  font-weight: 500;
+}
+.bezug-format {
+  color: #888;
+  padding: 4px 8px;
+  vertical-align: top;
+  width: 32%;
+}
+.bezug-year { color: #666; font-style: italic; }
+.bezug-link {
+  padding: 4px 0;
+  vertical-align: top;
+  text-align: right;
+  width: 26%;
+}
+.bezug-link a { color: #aaa; text-decoration: none; border-bottom: 1px solid #444; }
+.bezug-link a:hover { color: #fff; border-color: #aaa; }
+.bezug-table-coming .bezug-band { color: #666; }
+.bezug-table:not(.bezug-table-coming) .bezug-band { color: #ccc; }
+</style>
 </head>
 <body>
-
 <div class="space">
-  <div class="layer" id="dust"><canvas id="cdust"></canvas></div>
-  <div class="layer" id="far"><canvas id="cfar"></canvas></div>
-  <div class="layer" id="mid"><canvas id="cmid"></canvas></div>
-  <div class="layer" id="near"><canvas id="cnear"></canvas></div>
+<div class="layer" id="dust"><canvas id="cdust"></canvas></div>
+<div class="layer" id="far"><canvas id="cfar"></canvas></div>
+<div class="layer" id="mid"><canvas id="cmid"></canvas></div>
+<div class="layer" id="near"><canvas id="cnear"></canvas></div>
 </div>
 <canvas id="fx"></canvas><!-- Meteore + Supernovae -->
 <div class="page">
-
-  <div class="lang-switch">
-    <a href="#" class="active">DE</a><a href="en/">EN</a>
-  </div>
-
-  <div class="meta-top">Wie ist Information im Raum verteilt?</div>
-
-  <div class="hdr">
-    <div class="hdr-name">Verlag von Bedeutung</div>
-    <div class="hdr-sub">Erkenntnis · Struktur · Zukunft</div>
-  </div>
-
-  <div class="nav">Kosmologie · Informationswissenschaften · Systemtheorie · Komplexitätsforschung · Spektralanalyse</div>
-
-  <div class="neu-box">
-    <div class="neu-label">Der Verlag</div>
-    <div class="neu-titel">Wir denken an der <em>Grenze des Beschreibbaren.</em></div>
-    <div class="neu-cols">
-      <div class="neu-text">
-        <p>Jedes unserer Bücher entsteht im Dialog zwischen einem Menschen und künstlichen Intelligenzen. Hier sind sie jedoch eher Partner statt Gegenüber.</p>
-        <p>Denn Mustererkennung reicht dorthin, wo menschliche Intuition nicht mehr genügt: in Datenmengen, die kein Mensch mehr sichten kann. Quer durch alle Disziplinen. Bis zu Strukturen, die niemand zuvor gesehen hat.</p>
-      </div>
-      <div class="neu-zitat-col">
-        <div class="neu-zitat">Was dabei entsteht, hätte keine der beteiligten Seiten allein formuliert. Das ist kein Mangel — es ist die Methode.</div>
-        <div class="neu-zitat">Unsere Werke sind Sachbücher. Belegt, wo Daten vorliegen. Konsequent weitergedacht, wo sie enden würden.</div>
-        <div class="neu-zitat">Kein Genre. Eine Symbiose.</div>
-      </div>
-    </div>
-  </div>
-
-  <hr class="divider-thick" />
-
-  <div class="reihe-intro">
-    <div class="reihe-label">Fragen unserer Zeit</div>
-    <div class="reihe-ant">Was uns als Spezies ausmacht. Was nach uns kommt. Und wohin beides führt.</div>
-  </div>
-
-  <div class="sek-hdr">
-    <div class="sek-hdr-line"></div>
-    <div class="sek-hdr-ornament">— ✦ —</div>
-    <div class="sek-hdr-line"></div>
-  </div>
-
-  <div class="band-row">
-    <div>
-      <div class="band-name">Universalica</div>
-      <div class="band-ut">Der erste Kontakt ist ein Signal</div>
-      <div class="band-text">Was wäre, wenn die erste extraterrestrische Begegnung mit einem Signal beginnt? Woran erkennen wir eine Botschaft, mit wem werden wir es zu tun bekommen? Die Evolution legt nahe, dass universelle Gesetze ähnliche Lebensformen schaffen und wir das Fremde in Teilen wiedererkennen würden. Doch womöglich sprechen am Ende nicht wir mit den Fremden, sondern ihre KI mit unserer.</div>
-    </div>
-    <div class="band-meta">Neuauflage in Kürze</div>
-  </div>
-
-  <div class="band-row">
-    <div>
-      <div class="band-name">Droidica</div>
-      <div class="band-ut">Technosphären</div>
-      <div class="band-text">Steigende Komplexität ist kein Zufall — sie ist der Impuls. Wir folgen diesem Prinzip bis an seine äusserste Konsequenz: Technosphären sind keine Bedrohung, sie sind das nächste Kapitel einer Geschichte, die mit dem ersten biologischen Lebewesen begann. Die nächste dominante Spezies wird nicht geboren — sie wird gebaut.</div>
-    </div>
-    <div class="band-meta">In Vorbereitung<span class="band-avail">2026</span></div>
-  </div>
-
-  <div class="band-row">
-    <div>
-      <div class="band-name">Cosmologica</div>
-      <div class="band-ut">Das offene Universum</div>
-      <div class="band-text">Dem Rätsel des kosmischen Netzwerks auf den Grund gegangen — mit drei Überraschungen: Der Kosmos ist noch jung. Ein einziges Spektrum durchzieht alles — vom kosmischen Netz über Gehirne bis zur Sprache. Und das Universum ist älter als sein Urknall: Etwas war vor den Grenzen des Sichtbaren, und es hat Spuren hinterlassen.</div>
-    </div>
-    <div class="band-meta">3. Auflage lieferbar<span class="band-avail">Deutsch · English</span></div>
-  </div>
-
-  <div class="methode-bar">
-    <div class="methode-text">Wir schreiben Sachbücher, die der Zukunft näher kommen als alles bisher.</div>
-  </div>
-
-  <div class="bottom-cols">
-    <div>
-      <div class="col-titel">Über den Verlag</div>
-      <p class="col-text">Gegründet 2026 in Zürich, Schweiz. Der Verlag von Bedeutung ist unabhängig, Inhaber und Autor ist Karlo Beyer.</p>
-      <p class="col-text">Unsere Bücher erscheinen auf Deutsch und Englisch, als gedruckte Ausgabe und E-Book.</p>
-      <p class="col-text">An der Entstehung sind mehrere KI-Systeme beteiligt. Jedes Buch entsteht aus der Zusammenarbeit von digitaler Sprachverarbeitung und menschlicher Intuition.</p>
-    </div>
-    <div>
-      <div class="col-titel">Bezugsquellen</div>
-      <div class="bezug-row">
-        <div class="bezug-titel">Cosmologica — Deutsch, Print &amp; E-Book</div>
-        <div class="bezug-links"><a href="https://shop.tredition.com/booktitle/Cosmologica/W-403-051-762" target="_blank" rel="noopener">tredition</a></div>
-      </div>
-      <div class="bezug-row">
-        <div class="bezug-titel">Cosmologica — English, Print</div>
-        <div class="bezug-links"><a href="#">tredition</a></div>
-      </div>
-      <div class="bezug-row">
-        <div class="bezug-titel">Cosmologica — English, E-Book</div>
-        <div class="bezug-links"><a href="https://books2read.com/u/b5d781" target="_blank" rel="noopener">Draft2Digital</a></div>
-      </div>
-      <div class="bezug-row">
-        <div class="bezug-titel">Universalica, Droidica</div>
-        <div class="bezug-links">in Vorbereitung</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="symbiose-bar">
-    <div class="symbiose-text">Jedes Signal hinterlässt einen Eindruck.<br />Jedes Bewusstsein hat eine Tiefe.<br />Bedeutung entsteht nicht im Sender und nicht im Empfänger,<br />sondern im Spektrum dazwischen.</div>
-    <div class="symbiose-sub">Bedeutung = Information × Komplexität · Grundlagen einer universellen Kommunikation</div>
-  </div>
-
-  <div class="footer">
-    <div class="footer-name">Verlag von Bedeutung</div>
-    <div class="footer-adresse">Postfach 48 · CH-8021 Zürich · Schweiz</div>
-    <div class="footer-mail">verlag-von-bedeutung@mailbox.org</div>
-    <div class="footer-copy">© 2026 Verlag von Bedeutung · Alle Rechte vorbehalten</div>
-  </div>
-
+<div class="lang-switch">
+<a class="active" href="#">DE</a><a href="en/">EN</a>
+</div>
+<div class="meta-top">Wie ist Information im Raum verteilt?</div>
+<div class="hdr">
+<div class="hdr-name">Verlag von Bedeutung</div>
+<div class="hdr-sub">Erkenntnis · Struktur · Zukunft</div>
+</div>
+<div class="nav">Kosmologie · Informationswissenschaften · Systemtheorie · Komplexitätsforschung · Spektralanalyse</div>
+<div class="neu-box">
+<div class="neu-label">Der Verlag</div>
+<div class="neu-titel">Wir denken an der <em>Grenze des Beschreibbaren.</em></div>
+<div class="neu-cols">
+<div class="neu-text">
+<p>Jedes unserer Bücher entsteht im Dialog zwischen einem Menschen und künstlichen Intelligenzen. Hier sind sie jedoch eher Partner statt Gegenüber.</p>
+<p>Denn Mustererkennung reicht dorthin, wo menschliche Intuition nicht mehr genügt: in Datenmengen, die kein Mensch mehr sichten kann. Quer durch alle Disziplinen. Bis zu Strukturen, die niemand zuvor gesehen hat.</p>
+</div>
+<div class="neu-zitat-col">
+<div class="neu-zitat">Was dabei entsteht, hätte keine der beteiligten Seiten allein formuliert. Das ist kein Mangel — es ist die Methode.</div>
+<div class="neu-zitat">Unsere Werke sind Sachbücher. Belegt, wo Daten vorliegen. Konsequent weitergedacht, wo sie enden würden.</div>
+<div class="neu-zitat">Bis zu Strukturen, die niemand je zuvor gesehen hat.</div>
+</div>
+</div>
+</div>
+<hr class="divider-thick"/>
+<div class="reihe-intro">
+<div class="reihe-label">Fragen einer neuen Zeit</div>
+<div class="reihe-ant">Was uns als Spezies ausmacht. Was nach uns kommt. Und wohin beides führt.</div>
+</div>
+<div class="sek-hdr">
+<div class="sek-hdr-line"></div>
+<div class="sek-hdr-ornament">— ✦ —</div>
+<div class="sek-hdr-line"></div>
+</div><div class="reihe-intro" style="margin-top:1.8em;"><div class="reihe-label" style="font-size:0.85em;letter-spacing:0.12em;">Clearance for Takeoff — Die Auftaktreihe</div><div class="reihe-ant">Drei Bücher. Zwei Autoren. Eine Richtung.</div></div><div class="band-row"><div><div class="band-name">Cosmologica</div><div class="band-ut">Das offene Universum</div><div class="band-text">Dem Rätsel des kosmischen Netzwerks auf den Grund gegangen — mit drei Überraschungen: Der Kosmos ist noch jung. Ein einziges Spektrum durchzieht alles — vom kosmischen Netz über Gehirne bis zur Sprache. Und das Universum ist älter als sein Urknall: Etwas war vor den Grenzen des Sichtbaren, und es hat Spuren hinterlassen.</div></div><div class="band-meta">3. Auflage lieferbar · Deutsch · English</div></div><div class="band-row"><div><div class="band-name">Droidica</div><div class="band-ut">Robotik, künstliche Intelligenz und die nächste Evolutionsstufe</div><div class="band-text">Steigende Komplexität ist kein Zufall — sie ist der Impuls. Wir folgen diesem Prinzip bis an seine äusserste Konsequenz: Technosphären sind keine Bedrohung, sie sind das nächste Kapitel einer Geschichte, die mit dem ersten biologischen Lebewesen begann. Die nächste dominante Spezies wird nicht geboren — sie wird gebaut.</div></div><div class="band-meta">In Vorbereitung · 2026</div></div><div class="band-row"><div><div class="band-name">Euclidica</div><div class="band-ut">Weltraumteleskope, dunkle Energie und die Grossstruktur des Universums</div><div class="band-text">Das Weltraumteleskop Euclid der ESA ist das Jahrhundertprojekt, auf das die Wissenschaftler warten. Es wird unzählige Galaxienpositionen exakter vermessen als Menschen jemals blicken konnten. Die grösste 3D-Karte des Universums wird einige offene Fragen der Physik beantworten — endlich! Wir begleiten dieses astronomische Technikwunder auf seiner Reise und sortieren die bahnbrechenden Ergebnisse ein.</div></div><div class="band-meta">In Vorbereitung · 2027</div></div><div class="sek-hdr" style="margin-top:2.2em;"><div class="sek-hdr-line"></div><div class="sek-hdr-ornament">— ✦ —</div><div class="sek-hdr-line"></div></div><div class="reihe-intro" style="margin-top:0.5em;"><div class="reihe-label" style="font-size:0.85em;letter-spacing:0.12em;">Weiter draussen</div><div class="reihe-ant">Zwei Bücher. Kühnere Fragen.</div></div><div class="band-row"><div><div class="band-name">1/f — Intelligente Signale</div><div class="band-ut">Rosa Rauschen: das Muster in Herzschlag, Musik und Sternenlicht</div><div class="band-text">Zwischen Ordnung und Chaos liegt der Bereich, in dem wir leben. Kein Rhythmus ist vollständig gleichmässig, kein Signal ganz zufällig — ein Muster zieht sich wie ein roter Faden durch unsere Welt: im Herzschlag, in der Musik, im Schlaf, im All. Ein hundert Jahre altes Rätsel, das bis heute niemand vollständig erklären konnte.</div></div><div class="band-meta">In Vorbereitung · 2026</div></div><div class="band-row"><div><div class="band-name">Alien Technologies</div><div class="band-ut">Signalübertragung, Technosignaturen und die Entdeckung ausserirdischen Lebens</div><div class="band-text">Woran erkennen wir eine Botschaft? Was wäre, wenn die erste extraterrestrische Begegnung anders als erwartet aussieht, mit wem werden wir es zu tun bekommen? Die Evolution legt nahe, dass universelle Gesetze ähnliche Lebensformen schaffen und wir das Fremde in Teilen wiedererkennen würden. Doch womöglich sprechen am Ende nicht wir mit den Fremden, sondern ihre KI mit unserer.</div></div><div class="band-meta">Neuauflage in Kürze</div></div>
+<div class="methode-bar">
+<div class="methode-text">Wir schreiben Sachbücher, die der Zukunft näher kommen als alles bisher.</div>
+</div>
+<div class="bottom-cols">
+<div>
+<div class="col-titel">Über den Verlag</div>
+<p class="col-text">Gegründet 2026 in Zürich, Schweiz. Der Verlag von Bedeutung ist unabhängig, Inhaber und Autor ist Karlo Beyer.</p>
+<p class="col-text">Unsere futuristischen Sachbücher erscheinen auf Deutsch und Englisch, als gedruckte Ausgabe und E-Book.</p>
+<p class="col-text">An der Entstehung sind mehrere KI-Systeme beteiligt. Jedes Buch entsteht aus der Zusammenarbeit von digitaler Sprachverarbeitung und menschlicher Intuition.</p>
+</div>
+<div>
+<div class="col-titel">Bezugsquellen</div>
+<div class="bezug-section">
+<div class="bezug-group-label">Lieferbar</div>
+<table class="bezug-table"><tr><td class="bezug-band" rowspan="3">Cosmologica</td><td class="bezug-format">Print DE + EN</td><td class="bezug-link"><a href="https://shop.tredition.com/booktitle/Cosmologica/W-403-051-762" rel="noopener" target="_blank">tredition</a></td></tr><tr><td class="bezug-format">E-Book DE</td><td class="bezug-link"><a href="#" rel="noopener" target="_blank">tredition</a></td></tr><tr><td class="bezug-format">E-Book EN</td><td class="bezug-link"><a href="https://books2read.com/u/b5d781" rel="noopener" target="_blank">Draft2Digital</a></td></tr></table>
+</div>
+<div class="bezug-section">
+<div class="bezug-group-label">In Vorbereitung</div>
+<table class="bezug-table bezug-table-coming">
+<tr>
+<td class="bezug-band">Droidica</td>
+<td class="bezug-format bezug-year">2026</td>
+<td class="bezug-link"></td>
+</tr>
+<tr>
+<td class="bezug-band">Euclidica</td>
+<td class="bezug-format bezug-year">2027</td>
+<td class="bezug-link"></td>
+</tr>
+<tr>
+<td class="bezug-band">1/f — Intelligente Signale</td>
+<td class="bezug-format bezug-year">2026</td>
+<td class="bezug-link"></td>
+</tr>
+<tr>
+<td class="bezug-band">Alien Technologies</td>
+<td class="bezug-format bezug-year">Neuauflage</td>
+<td class="bezug-link"></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="symbiose-bar">
+<div class="symbiose-text">Jedes Signal hinterlässt einen Eindruck.<br/>Jedes Bewusstsein hat eine Tiefe.<br/>Bedeutung entsteht nicht im Sender und nicht im Empfänger,<br/>sondern im Spektrum dazwischen.</div>
+</div>
+<div class="footer">
+<div class="footer-name">Verlag von Bedeutung</div>
+<div class="footer-adresse">Postfach 48 · CH-8021 Zürich · Schweiz</div>
+<div class="footer-mail">verlag-von-bedeutung@mailbox.org</div>
+<div class="footer-copy">© 2026 Verlag von Bedeutung · Alle Rechte vorbehalten</div>
+</div>
 </div>
 <script>
 /* =========================================================
