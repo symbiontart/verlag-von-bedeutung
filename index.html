@@ -1,341 +1,464 @@
 <!DOCTYPE html>
-
 <html lang="de">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="only light" name="color-scheme"/>
-<meta content="telephone=no" name="format-detection"/>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="only light">
 <title>Verlag von Bedeutung — Futuristische Sachbücher aus Zürich | Kosmologie, KI, Signale</title>
-<meta content="Futuristische Sachbücher auf Deutsch und Englisch: Kosmologie, künstliche Intelligenz, Weltraumteleskope und die Signale der Zukunft. Verlag von Bedeutung, Zürich — Print und E-Book." name="description"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&amp;family=Raleway:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<meta name="description" content="Verlag von Bedeutung, Zürich: Sachbücher über Kosmologie, künstliche Intelligenz, Signale und die Zukunft des Menschen. Bücher, die es in sich haben.">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { margin: 0; padding: 0; }
-    body {
-      font-family: 'Lora', Georgia, serif;
-      color: #1a1a1a; font-size: 16px; line-height: 1.7;
-      background: #05060a;
-      background: radial-gradient(ellipse 60% 80% at 50% 30%, #0d1120 0%, #070810 55%, #04050a 100%);
-      overflow-x: hidden;
-    }
-
-    /* ===== Sternen-Ebenen (fixed, hinter allem) ===== */
-    .space { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
-    .layer { position: absolute; inset: -30%; width: 160%; will-change: transform;
-             transform: translate3d(0,0,0); backface-visibility: hidden; }
-    .layer canvas { width: 100%; height: 100%; display: block; }
-    #fx { position: fixed; inset: 0; z-index: 1; pointer-events: none; }
-    .page {
-      position: relative; z-index: 2;
-      max-width: 720px; margin: 7vh auto 11vh;
-      padding: 2.5rem 2rem 4rem;
-      background: #ffffff; border-radius: 3px;
-      box-shadow: 0 0 0 1px rgba(255,255,255,0.06),
-                  0 30px 80px -20px rgba(0,0,0,0.85),
-                  0 10px 30px -10px rgba(0,0,0,0.7);
-    }
-    .page::after {
-      content: ""; position: absolute; inset: -2px; border-radius: 4px;
-      box-shadow: 0 0 60px 4px rgba(120,150,255,0.06); pointer-events: none;
-    }
-    .lang-switch { text-align: right; margin-bottom: 0.8rem; }
-    .lang-switch a { font-family: 'Raleway', sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #888; text-decoration: none; margin-left: 1rem; border: 0.5px solid #ccc; padding: 0.3em 0.7em; }
-    .lang-switch a:hover { color: #1a1a1a; border-color: #1a1a1a; }
-    .lang-switch a.active { color: #1a1a1a; border-color: #1a1a1a; font-weight: 700; }
-    .meta-top { text-align: center; font-family: 'Raleway', sans-serif; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: #aaa; padding-bottom: 0.8rem; border-bottom: 0.5px solid #ccc; margin-bottom: 1rem; }
-    .hdr { text-align: center; border-bottom: 2px solid #1a1a1a; border-top: 2px solid #1a1a1a; padding: 0.8rem 0 0.6rem; margin-bottom: 0.5rem; }
-    .hdr-name { font-size: 2rem; font-weight: 700; letter-spacing: 0.04em; }
-    .hdr-sub { font-family: 'Raleway', sans-serif; font-size: 0.65rem; letter-spacing: 0.24em; color: #666; text-transform: uppercase; margin-top: 6px; font-weight: 300; }
-    .nav { text-align: center; font-family: 'Raleway', sans-serif; font-size: 0.6rem; letter-spacing: 0.14em; color: #aaa; text-transform: uppercase; padding: 0.5rem 0; border-bottom: 0.5px solid #ccc; margin-bottom: 1.2rem; line-height: 2; }
-
-    .neu-box { border: 1px solid #1a1a1a; padding: 1.2rem 1.4rem; margin-bottom: 1.2rem; }
-    .neu-label { font-family: 'Raleway', sans-serif; font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.5rem; }
-    .neu-titel { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.9rem; line-height: 1.3; }
-    .neu-titel em { font-style: italic; font-weight: 400; }
-    .neu-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
-    @media (max-width: 560px) { .neu-cols { grid-template-columns: 1fr; } }
-    .neu-text { font-size: 0.9rem; line-height: 1.75; color: #333; text-align: justify; }
-    .neu-text p + p { margin-top: 0.6rem; }
-    .neu-zitat-col { border-left: 2px solid #ccc; padding-left: 1rem; }
-    .neu-zitat + .neu-zitat { margin-top: 0.7rem; }
-    .neu-zitat { font-style: italic; font-size: 0.9rem; line-height: 1.75; color: #333; }
-    .neu-zitat-quelle { font-family: 'Raleway', sans-serif; font-style: normal; font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: #aaa; margin-top: 0.6rem; }
-
-    .divider-thick { border: none; border-top: 1.5px solid #1a1a1a; margin: 1.2rem 0; }
-    .reihe-intro { text-align: center; padding: 1rem 0 0.8rem; }
-    .reihe-label { font-family: 'Lora', serif; font-size: 1.45rem; font-weight: 600; letter-spacing: 0.03em; color: #1a1a1a; margin-bottom: 0.6rem; }
-    .reihe-frage { font-size: 1.15rem; font-weight: 700; line-height: 1.5; margin-bottom: 0.4rem; }
-    .reihe-ant { font-family: 'Raleway', sans-serif; font-size: 0.95rem; font-weight: 400; color: #666; font-style: italic; }
-    .sek-hdr { display: flex; align-items: center; gap: 12px; margin: 1rem 0 0.8rem; }
-    .sek-hdr-line { flex: 1; height: 0.5px; background: #1a1a1a; }
-    .sek-hdr-ornament { font-family: 'Lora', serif; font-size: 0.8rem; font-style: italic; color: #888; white-space: nowrap; }
-
-    .band-row { display: grid; grid-template-columns: 1fr 88px; gap: 12px; padding: 0.9rem 0; border-bottom: 0.5px solid #eee; align-items: start; }
-    .band-row:last-child { border-bottom: none; }
-    .band-name { font-size: 1.05rem; font-weight: 700; margin-bottom: 2px; }
-    .band-ut { font-size: 0.85rem; font-style: italic; color: #777; margin-bottom: 5px; }
-    .band-text { font-size: 0.84rem; line-height: 1.7; color: #555; text-align: justify; }
-    .band-meta { font-family: 'Raleway', sans-serif; font-size: 0.6rem; color: #bbb; text-align: right; line-height: 1.7; padding-top: 4px; }
-    .band-avail { font-size: 0.6rem; color: #888; font-style: italic; display: block; }
-
-    .methode-bar { text-align: center; border-top: 0.5px solid #ccc; border-bottom: 0.5px solid #ccc; padding: 0.7rem 0.8rem; margin: 1rem 0; }
-    .methode-text { font-style: italic; font-size: 0.88rem; line-height: 1.7; color: #555; }
-    .methode-sub { font-family: 'Raleway', sans-serif; font-size: 0.65rem; color: #aaa; margin-top: 4px; letter-spacing: 0.06em; }
-
-    .bottom-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1rem; border-top: 0.5px solid #ccc; padding-top: 1rem; }
-    @media (max-width: 560px) { .bottom-cols { grid-template-columns: 1fr; } }
-    .col-titel { font-family: 'Raleway', sans-serif; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 0.5rem; border-bottom: 0.5px solid #ddd; padding-bottom: 4px; }
-    .col-text { font-size: 0.82rem; line-height: 1.7; color: #444; margin-bottom: 0.5rem; }
-    .bezug-row { display: grid; grid-template-columns: 1fr auto; gap: 8px; font-size: 0.78rem; line-height: 1.6; padding: 4px 0; border-bottom: 0.5px solid #f0f0f0; }
-    .bezug-row:last-child { border-bottom: none; }
-    .bezug-titel { color: #333; }
-    .bezug-links { font-family: 'Raleway', sans-serif; font-size: 0.66rem; color: #888; white-space: nowrap; }
-    .bezug-links a { color: #666; text-decoration: none; border-bottom: 0.5px solid #ccc; }
-    .bezug-links a:hover { color: #1a1a1a; border-color: #1a1a1a; }
-
-    .symbiose-bar { border-top: 0.5px solid #ccc; border-bottom: 0.5px solid #ccc; text-align: center; padding: 0.8rem 1rem; margin: 1rem 0; }
-    .symbiose-text { font-style: italic; font-size: 0.9rem; line-height: 1.7; color: #444; }
-    .symbiose-sub { font-family: 'Raleway', sans-serif; font-size: 0.62rem; color: #aaa; margin-top: 6px; letter-spacing: 0.06em; }
-    .qr-area { text-align: center; margin: 1rem 0 0.5rem; }
-    .qr-link { font-family: 'Raleway', sans-serif; font-size: 0.7rem; color: #888; display: block; margin-top: 6px; letter-spacing: 0.06em; }
-    .qr-link a { color: #888; text-decoration: none; }
-    .qr-link a:hover { text-decoration: underline; }
-
-    .footer { border-top: 2px solid #1a1a1a; margin-top: 1.2rem; padding-top: 0.8rem; text-align: center; }
-    .footer-name { font-family: 'Raleway', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 4px; }
-    .footer-adresse { font-family: 'Raleway', sans-serif; font-size: 0.6rem; color: #aaa; margin-bottom: 4px; }
-    .footer-mail { font-family: 'Raleway', sans-serif; font-size: 0.6rem; color: #aaa; margin-bottom: 3px; }
-    .footer-copy { font-family: 'Raleway', sans-serif; font-size: 0.55rem; color: #bbb; }
-
-    /* Mobil: kein Sternhintergrund. Der schmale Satzspiegel liest sich auf
-       ruhigem Grund besser, und es spart die gesamte Animation. */
-    @media (max-width: 850px) {
-      .space, #fx { display: none !important; }
-      body { background: #0b0e16 !important; }
-      .page { margin: 0 auto 6vh; border-radius: 0; box-shadow: none; }
-    }
-
-    /* Lesbarkeit auf kleinen Bildschirmen — behebt die zu feine Schrift auf dem Handy */
-    @media (max-width: 560px) {
-      .page { padding: 1.6rem 1.2rem 3rem; }
-      body { font-size: 17px; }
-      .neu-text, .neu-zitat { font-size: 0.95rem; }
-      .band-text { font-size: 0.9rem; text-align: left; }
-      .neu-text { text-align: left; }
-      .band-row { grid-template-columns: 1fr; }
-      .band-meta { text-align: left; color: #999; padding-top: 6px; }
-      .col-text, .bezug-row { font-size: 0.88rem; }
-      .meta-top { font-size: 0.62rem; letter-spacing: 0.14em; }
-      .hdr-name { font-size: 1.6rem; }
-    }
-  /* ---- Mobil-Kontrast v3: fein bleibt fein, aber dunkel (29.8.2026) ---- */
-  @media (max-width: 768px) {
-    .band-row, .bezug-row { border-bottom: 1px solid #555 !important; }
-    .methode-bar, .symbiose-bar { border-top: 1px solid #555 !important; border-bottom: 1px solid #555 !important; }
-    .bottom-cols { border-top: 1px solid #555 !important; }
-    .sek-hdr-line { height: 1px !important; }
-    .divider-thick { border-top-width: 2px !important; }
-    hr { border: none !important; border-top: 1px solid #555 !important; }
-    .lang-switch a { border-color: #555 !important; }
-    .meta-top, .nav { font-size: 0.7rem !important; color: #444 !important; border-color: #555 !important; }
-    .hdr-sub { font-size: 0.72rem !important; color: #444 !important; }
-    .band-meta, .band-avail { font-size: 0.7rem !important; color: #4a4a4a !important; }
-    .methode-sub, .symbiose-sub { font-size: 0.72rem !important; color: #4a4a4a !important; }
-    .bezug-links { font-size: 0.72rem !important; color: #3a3a3a !important; }
-    .bezug-links a { border-bottom: 1px solid #555 !important; color: #222 !important; }
-    .col-titel { font-size: 0.7rem !important; color: #1a1a1a !important; border-color: #555 !important; }
-    .neu-zitat-quelle { font-size: 0.7rem !important; color: #444 !important; }
-    .sek-hdr-ornament { color: #444 !important; }
-    .qr-link, .qr-link a { font-size: 0.76rem !important; color: #3a3a3a !important; }
-    .footer-adresse, .footer-mail { font-size: 0.7rem !important; color: #4a4a4a !important; }
-    .footer-copy { font-size: 0.66rem !important; color: #555 !important; }
-    .meta-top, .nav, .hdr-sub, .band-meta, .band-avail, .methode-sub, .symbiose-sub,
-    .bezug-links, .bezug-links a, .neu-zitat-quelle, .qr-link, .qr-link a,
-    .footer-adresse, .footer-mail, .footer-copy { font-weight: 600 !important; }
-    .col-titel, .neu-label { font-weight: 700 !important; }
+  /* Layout: ein breites Papierblatt vor dem Sternenhimmel; oben eine dunkle Bildleiste, darunter Regal-Zeilen Cover + Klappentext */
+  :root {
+    --paper: #fbfaf7; --ink: #1a1a1a; --ink-2: #4a4a4a; --ink-3: #7a7a7a; --rule: #d9d6cf; --rule-2: #ececea;
+    --accent: #2f6db5; --leaf: #3d7a3f; --leaf-bg: #eef5ea;
+    --serif: 'Merriweather', Georgia, serif; --sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    color-scheme: only light;
   }
-    :root { color-scheme: only light; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
   html { -webkit-text-size-adjust: 100%; }
-  
-.bezug-section { margin-bottom: 1.2em; }
-.bezug-group-label {
-  font-size: 0.68em;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #888;
-  border-bottom: 1px solid #333;
-  padding-bottom: 3px;
-  margin-bottom: 0.5em;
-}
-.bezug-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.82em;
-}
-.bezug-table tr { border-bottom: 1px solid #222; }
-.bezug-table tr:last-child { border-bottom: none; }
-.bezug-band {
-  color: #ccc;
-  padding: 4px 8px 4px 0;
-  vertical-align: top;
-  width: 42%;
-  font-weight: 500;
-}
-.bezug-format {
-  color: #888;
-  padding: 4px 8px;
-  vertical-align: top;
-  width: 32%;
-}
-.bezug-year { color: #666; font-style: italic; }
-.bezug-link {
-  padding: 4px 0;
-  vertical-align: top;
-  text-align: right;
-  width: 26%;
-}
-.bezug-link a { color: #aaa; text-decoration: none; border-bottom: 1px solid #444; }
-.bezug-link a:hover { color: #fff; border-color: #aaa; }
-.bezug-table-coming .bezug-band { color: #666; }
-.bezug-table:not(.bezug-table-coming) .bezug-band { color: #ccc; }
+  body { font-family: var(--serif); color: var(--ink); font-size: 16px; line-height: 1.7;
+    background: #05060a; background: radial-gradient(ellipse 60% 80% at 50% 30%, #0d1120 0%, #070810 55%, #04050a 100%); overflow-x: hidden; }
+  .space { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+  .layer { position: absolute; inset: -30%; width: 160%; will-change: transform; transform: translate3d(0,0,0); backface-visibility: hidden; }
+  .layer canvas { width: 100%; height: 100%; display: block; }
+  #fx { position: fixed; inset: 0; z-index: 1; pointer-events: none; }
+
+  .page { position: relative; z-index: 2; max-width: 1080px; margin: 6vh auto 10vh; background: var(--paper); border-radius: 3px; overflow: hidden;
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.06), 0 30px 80px -20px rgba(0,0,0,0.85), 0 10px 30px -10px rgba(0,0,0,0.7); }
+  .inner { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  @media (min-width: 700px) { .inner { padding-left: 48px; padding-right: 48px; } }
+
+  /* Kopf */
+  .hero { position: relative; height: 340px; background: #06070c url('img/hero_band.jpg') center 55% / cover no-repeat; color: #f3f1ec; }
+  .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(5,6,12,0.55) 0%, rgba(5,6,12,0.05) 45%, rgba(5,6,12,0.72) 100%); }
+  .hero .inner { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: space-between; padding-block: 22px 30px; }
+  .topline { display: flex; justify-content: space-between; align-items: center; font-family: var(--sans); font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(243,241,236,0.8); }
+  .lang a { color: rgba(243,241,236,0.75); text-decoration: none; margin-left: 0.9rem; border: 1px solid rgba(243,241,236,0.35); padding: 0.25em 0.6em; }
+  .lang a.active, .lang a:hover { color: #fff; border-color: #fff; }
+  .brand { font-size: clamp(1.9rem, 4vw, 2.8rem); font-weight: 700; letter-spacing: 0.02em; line-height: 1.1; text-wrap: balance; text-shadow: 0 2px 18px rgba(0,0,0,0.6); }
+  .slogan { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: clamp(1.05rem, 2vw, 1.35rem); color: rgba(243,241,236,0.92); margin-top: 0.4rem; text-shadow: 0 1px 12px rgba(0,0,0,0.6); }
+  .fields { font-family: var(--sans); font-size: 0.66rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); text-align: center; padding: 0.9rem 0; border-bottom: 1px solid var(--rule); line-height: 2; }
+
+  /* Verlag */
+  .verlag { display: grid; grid-template-columns: 1.3fr 1fr; gap: 2.5rem; padding-block: 2.4rem 2rem; border-bottom: 1px solid var(--rule); }
+  .verlag h2 { font-size: 1.55rem; font-weight: 700; line-height: 1.3; margin-bottom: 0.8rem; text-wrap: balance; }
+  .verlag h2 em { font-weight: 300; font-style: italic; }
+  .verlag p { font-size: 0.95rem; color: var(--ink-2); }
+  .verlag p + p { margin-top: 0.6rem; }
+  .zitate { border-left: 2px solid var(--rule); padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.8rem; justify-content: center; }
+  .zitate p { font-style: italic; font-size: 0.95rem; color: var(--ink-2); }
+
+  /* Regal */
+  .gruppe { padding-block: 2rem 0.6rem; }
+  .gruppe-kopf { display: flex; align-items: baseline; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.4rem; }
+  .gruppe-kopf h3 { font-size: 1.25rem; font-weight: 700; }
+  .gruppe-kopf span { font-family: var(--sans); font-size: 0.78rem; color: var(--ink-3); font-style: italic; }
+  .buch { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 2rem; padding-block: 1.6rem; border-top: 1px solid var(--rule-2); align-items: start; }
+  .buch:first-of-type { border-top: none; }
+  .cover { position: relative; width: 170px; aspect-ratio: 2 / 3; max-width: 100%; border-radius: 2px; overflow: hidden; background: #111;
+    box-shadow: 0 14px 30px -14px rgba(0,0,0,0.6), 0 2px 6px rgba(0,0,0,0.25); }
+  .cover img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .cover .tag { position: absolute; left: 0; right: 0; bottom: 0; font-family: var(--sans); font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; text-align: center; padding: 0.35em 0; color: #eee; background: rgba(0,0,0,0.6); }
+  .titel { font-size: 1.35rem; font-weight: 700; line-height: 1.25; }
+  .ut { font-style: italic; color: var(--ink-3); font-size: 0.95rem; margin: 0.15rem 0 0.7rem; }
+  .text { font-size: 0.92rem; color: var(--ink-2); max-width: 62ch; }
+  .status { display: inline-block; font-family: var(--sans); font-size: 0.64rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.3em 0.7em; border: 1px solid var(--rule); color: var(--ink-2); margin-left: 0.6rem; vertical-align: middle; font-weight: 500; }
+  .status.da { border-color: var(--accent); color: var(--accent); }
+  .bezug { margin-top: 0.9rem; font-family: var(--sans); font-size: 0.74rem; color: var(--ink-3); display: flex; flex-wrap: wrap; gap: 0.3rem 1.2rem; }
+  .bezug a { color: var(--ink-2); text-decoration: none; border-bottom: 1px solid var(--rule); }
+  .bezug a:hover { color: var(--ink); border-color: var(--ink); }
+  .bezug .folgt { font-style: italic; }
+
+  /* Leisten */
+  .leiste { text-align: center; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 1rem 1rem; margin-block: 1.6rem; font-style: italic; font-size: 0.95rem; color: var(--ink-2); }
+  .baum { display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 1.2rem; align-items: center; background: var(--leaf-bg); border: 1px solid #d6e5d0; padding: 1.1rem 1.4rem; margin-block: 1.6rem; border-radius: 3px; }
+  .baum svg { width: 56px; height: 56px; display: block; }
+  .baum h4 { font-size: 1rem; font-weight: 700; margin-bottom: 0.2rem; }
+  .baum p { font-size: 0.9rem; color: var(--ink-2); }
+  .baum p small { display: block; font-family: var(--sans); font-size: 0.72rem; color: var(--ink-3); margin-top: 0.3rem; }
+  .vertrieb { font-family: var(--sans); font-size: 0.78rem; color: var(--ink-3); text-align: center; margin-bottom: 1.6rem; }
+  .vertrieb a { color: var(--ink-2); text-decoration: none; border-bottom: 1px solid var(--rule); }
+
+  .unten { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; padding-block: 1.6rem; border-top: 1px solid var(--rule); }
+  .unten h5 { font-family: var(--sans); font-size: 0.66rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; border-bottom: 1px solid var(--rule); padding-bottom: 4px; margin-bottom: 0.6rem; }
+  .unten p { font-size: 0.86rem; color: var(--ink-2); }
+  .unten p + p { margin-top: 0.5rem; }
+  .motto { text-align: center; font-style: italic; font-size: 0.95rem; color: var(--ink-2); border-top: 1px solid var(--rule); padding-block: 1.4rem; }
+  .footer { border-top: 2px solid var(--ink); padding-block: 1rem 2rem; text-align: center; font-family: var(--sans); font-size: 0.68rem; color: var(--ink-3); line-height: 1.9; }
+  .footer b { display: block; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink); }
+  .footer a { color: var(--ink-3); text-decoration: none; }
+
+  @media (max-width: 850px) { .space, #fx { display: none !important; } body { background: #0b0e16 !important; } .page { margin: 0 auto 6vh; border-radius: 0; box-shadow: none; } }
+  @media (max-width: 700px) {
+    .hero { height: 300px; }
+    .verlag, .unten { grid-template-columns: 1fr; gap: 1.2rem; }
+    .zitate { border-left: none; padding-left: 0; border-top: 1px solid var(--rule); padding-top: 1rem; }
+    .buch { grid-template-columns: 120px minmax(0, 1fr); gap: 1.1rem; }
+    .cover { width: 120px; }
+    .status { display: block; width: max-content; margin: 0.4rem 0 0; }
+    body { font-size: 17px; }
+  }
+  @media (max-width: 440px) { .buch { grid-template-columns: 1fr; } .cover { width: 150px; } }
+  @media (prefers-reduced-motion: reduce) { #fx { display: none; } }
 </style>
-<link href="https://symbiontart.github.io/verlag-von-bedeutung/" rel="canonical"/><link href="https://symbiontart.github.io/verlag-von-bedeutung/" hreflang="de" rel="alternate"/><link href="https://symbiontart.github.io/verlag-von-bedeutung/en/" hreflang="en" rel="alternate"/><link href="https://symbiontart.github.io/verlag-von-bedeutung/" hreflang="x-default" rel="alternate"/><meta content="website" property="og:type"/><meta content="Verlag von Bedeutung" property="og:site_name"/><meta content="Verlag von Bedeutung — Futuristische Sachbücher aus Zürich" property="og:title"/><meta content="Kosmologie, künstliche Intelligenz, Weltraumteleskope und die Signale der Zukunft. Fünf Bände, zwei Sprachen, Print und E-Book." property="og:description"/><meta content="https://symbiontart.github.io/verlag-von-bedeutung/" property="og:url"/><meta content="de_CH" property="og:locale"/><meta content="en_US" property="og:locale:alternate"/><meta content="summary_large_image" name="twitter:card"/><meta content="Verlag von Bedeutung — Futuristische Sachbücher aus Zürich" name="twitter:title"/><script type="application/ld+json">
+
+<link rel="canonical" href="https://symbiontart.github.io/verlag-von-bedeutung/">
+<link rel="alternate" hreflang="de" href="https://symbiontart.github.io/verlag-von-bedeutung/">
+<link rel="alternate" hreflang="en" href="https://symbiontart.github.io/verlag-von-bedeutung/en/">
+<link rel="alternate" hreflang="x-default" href="https://symbiontart.github.io/verlag-von-bedeutung/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Verlag von Bedeutung"><meta property="og:title" content="Verlag von Bedeutung — Futuristische Sachbücher aus Zürich"><meta property="og:description" content="Bücher, die es in sich haben. Kosmologie, künstliche Intelligenz, Signale und die Zukunft des Menschen. Sieben Titel, zwei Sprachen, Print und E-Book."><meta property="og:url" content="https://symbiontart.github.io/verlag-von-bedeutung/"><meta property="og:locale" content="de_CH"><meta property="og:locale:alternate" content="en_US">
+<meta property="og:image" content="https://symbiontart.github.io/verlag-von-bedeutung/og-image.jpg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Verlag von Bedeutung — Futuristische Sachbücher aus Zürich"><meta name="twitter:image" content="https://symbiontart.github.io/verlag-von-bedeutung/og-image.jpg">
+<script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://symbiontart.github.io/verlag-von-bedeutung/#publisher",
+   "name": "Verlag von Bedeutung",
+   "url": "https://symbiontart.github.io/verlag-von-bedeutung/",
+   "foundingDate": "2026-06",
+   "founder": {
+    "@type": "Person",
+    "name": "Karlo Beyer"
+   },
+   "address": {
+    "@type": "PostalAddress",
+    "postOfficeBoxNumber": "48",
+    "postalCode": "8021",
+    "addressLocality": "Zürich",
+    "addressCountry": "CH"
+   },
+   "email": "verlag-von-bedeutung@mailbox.org",
+   "slogan": "Bücher, die es in sich haben."
+  },
+  {
+   "@type": "BookSeries",
+   "name": "Clearance for Takeoff",
+   "description": "Die Eröffnungsserie: Cosmologica, Droidica, Euclidica.",
+   "publisher": {
+    "@id": "https://symbiontart.github.io/verlag-von-bedeutung/#publisher"
+   }
+  },
+  {
+   "@type": "Book",
+   "name": "Cosmologica — Das offene Universum",
+   "author": [
     {
-      "@type": "Organization",
-      "@id": "https://symbiontart.github.io/verlag-von-bedeutung/#publisher",
-      "name": "Verlag von Bedeutung",
-      "url": "https://symbiontart.github.io/verlag-von-bedeutung/",
-      "foundingDate": "2026-06",
-      "founder": {"@type": "Person", "name": "Karlo Beyer"},
-      "address": {"@type": "PostalAddress", "postOfficeBoxNumber": "48", "postalCode": "8021", "addressLocality": "Zürich", "addressCountry": "CH"},
-      "email": "verlag-von-bedeutung@mailbox.org",
-      "description": "Futuristische Sachbücher auf Deutsch und Englisch, Print und E-Book."
+     "@type": "Person",
+     "name": "Karlo Beyer"
     },
     {
-      "@type": "Book",
-      "name": "Cosmologica — Das offene Universum",
-      "author": {"@type": "Person", "name": "Karlo Beyer"},
-      "publisher": {"@id": "https://symbiontart.github.io/verlag-von-bedeutung/#publisher"},
-      "inLanguage": ["de", "en"],
-      "bookEdition": "3. Auflage",
-      "workExample": [
-        {"@type": "Book", "isbn": "978-3-384-98143-1", "bookFormat": "https://schema.org/Paperback", "inLanguage": "de"},
-        {"@type": "Book", "isbn": "978-3-384-98156-1", "bookFormat": "https://schema.org/EBook", "inLanguage": "de"},
-        {"@type": "Book", "isbn": "978-3-384-98602-3", "bookFormat": "https://schema.org/Paperback", "inLanguage": "en"},
-        {"@type": "Book", "isbn": "979-8-233-99128-8", "bookFormat": "https://schema.org/EBook", "inLanguage": "en"}
-      ],
-      "offers": {"@type": "Offer", "url": "https://shop.tredition.com/booktitle/Cosmologica/W-403-051-762", "availability": "https://schema.org/InStock"}
-    },
-    {
-      "@type": "BookSeries",
-      "name": "Clearance for Takeoff",
-      "description": "Die Auftaktreihe des Verlags von Bedeutung: Cosmologica, Droidica, Euclidica.",
-      "publisher": {"@id": "https://symbiontart.github.io/verlag-von-bedeutung/#publisher"}
+     "@type": "Person",
+     "name": "Cosmo Claude"
     }
-  ]
+   ],
+   "publisher": {
+    "@id": "https://symbiontart.github.io/verlag-von-bedeutung/#publisher"
+   },
+   "inLanguage": [
+    "de",
+    "en"
+   ],
+   "workExample": [
+    {
+     "@type": "Book",
+     "isbn": "978-3-384-98143-1"
+    },
+    {
+     "@type": "Book",
+     "isbn": "978-3-384-98156-1"
+    },
+    {
+     "@type": "Book",
+     "isbn": "978-3-384-98602-3"
+    },
+    {
+     "@type": "Book",
+     "isbn": "979-8-233-99128-8"
+    }
+   ],
+   "offers": {
+    "@type": "Offer",
+    "url": "https://shop.tredition.com/booktitle/Cosmologica/W-403-051-762",
+    "availability": "https://schema.org/InStock"
+   }
+  },
+  {
+   "@type": "Book",
+   "name": "Droidica — Robotik, künstliche Intelligenz und die nächste Evolutionsstufe",
+   "author": [
+    {
+     "@type": "Person",
+     "name": "Karlo Beyer"
+    },
+    {
+     "@type": "Person",
+     "name": "Cosmo Claude"
+    }
+   ],
+   "publisher": {
+    "@id": "https://symbiontart.github.io/verlag-von-bedeutung/#publisher"
+   },
+   "inLanguage": [
+    "de",
+    "en"
+   ]
+  },
+  {
+   "@type": "Book",
+   "name": "Euclidica — Weltraumteleskope, dunkle Energie und die Grossstruktur des Universums",
+   "author": [
+    {
+     "@type": "Person",
+     "name": "Karlo Beyer"
+    },
+    {
+     "@type": "Person",
+     "name": "Cosmo Claude"
+    }
+   ],
+   "publisher": {
+    "@id": "https://symbiontart.github.io/verlag-von-bedeutung/#publisher"
+   },
+   "inLanguage": [
+    "de",
+    "en"
+   ]
+  },
+  {
+   "@type": "Book",
+   "name": "1/f – Intelligente Signale — Rosa Rauschen: das Muster in Herzschlag, Musik und Sternenlicht",
+   "author": [
+    {
+     "@type": "Person",
+     "name": "Karlo Beyer"
+    },
+    {
+     "@type": "Person",
+     "name": "Cosmo Claude"
+    }
+   ],
+   "publisher": {
+    "@id": "https://symbiontart.github.io/verlag-von-bedeutung/#publisher"
+   },
+   "inLanguage": [
+    "de",
+    "en"
+   ]
+  },
+  {
+   "@type": "Book",
+   "name": "Alien Technologies — Ausserirdisches Leben, Exoplaneten und fremde Technologien",
+   "author": [
+    {
+     "@type": "Person",
+     "name": "Karlo Beyer"
+    },
+    {
+     "@type": "Person",
+     "name": "Cosmo Claude"
+    }
+   ],
+   "publisher": {
+    "@id": "https://symbiontart.github.io/verlag-von-bedeutung/#publisher"
+   },
+   "inLanguage": [
+    "de",
+    "en"
+   ]
+  },
+  {
+   "@type": "Book",
+   "name": "Neue Kinder — Fortpflanzung im neuen Jahrtausend",
+   "author": [
+    {
+     "@type": "Person",
+     "name": "Karlo Beyer"
+    },
+    {
+     "@type": "Person",
+     "name": "Cosmo Claude"
+    }
+   ],
+   "publisher": {
+    "@id": "https://symbiontart.github.io/verlag-von-bedeutung/#publisher"
+   },
+   "inLanguage": [
+    "de",
+    "en"
+   ]
+  },
+  {
+   "@type": "Book",
+   "name": "Kuriere — Vorreiter digitaler Informationsverarbeitung",
+   "author": [
+    {
+     "@type": "Person",
+     "name": "Karlo Beyer"
+    },
+    {
+     "@type": "Person",
+     "name": "Cosmo Claude"
+    }
+   ],
+   "publisher": {
+    "@id": "https://symbiontart.github.io/verlag-von-bedeutung/#publisher"
+   },
+   "inLanguage": [
+    "de",
+    "en"
+   ]
+  }
+ ]
 }
-</script><meta content="https://symbiontart.github.io/verlag-von-bedeutung/og-image.jpg" property="og:image"/><meta content="Cosmologica — Das offene Universum, Verlag von Bedeutung" property="og:image:alt"/><meta content="https://symbiontart.github.io/verlag-von-bedeutung/og-image.jpg" name="twitter:image"/></head>
+</script>
+</head>
 <body>
 <div class="space">
-<div class="layer" id="dust"><canvas id="cdust"></canvas></div>
-<div class="layer" id="far"><canvas id="cfar"></canvas></div>
-<div class="layer" id="mid"><canvas id="cmid"></canvas></div>
-<div class="layer" id="near"><canvas id="cnear"></canvas></div>
+  <div class="layer" id="dust"><canvas id="cdust"></canvas></div>
+  <div class="layer" id="far"><canvas id="cfar"></canvas></div>
+  <div class="layer" id="mid"><canvas id="cmid"></canvas></div>
+  <div class="layer" id="near"><canvas id="cnear"></canvas></div>
 </div>
-<canvas id="fx"></canvas><!-- Meteore + Supernovae -->
-<div class="page">
-<div class="lang-switch">
-<a class="active" href="#">DE</a><a href="en/">EN</a>
-</div>
-<div class="meta-top">Wie ist Information im Raum verteilt?</div>
-<div class="hdr">
-<div class="hdr-name">Verlag von Bedeutung</div>
-<div class="hdr-sub">Erkenntnis · Struktur · Zukunft</div>
-</div>
-<div class="nav">Kosmologie · Informationswissenschaften · Systemtheorie · Komplexitätsforschung · Spektralanalyse</div>
-<div class="neu-box">
-<div class="neu-label">Der Verlag</div>
-<div class="neu-titel">Wir denken an der <em>Grenze des Beschreibbaren.</em></div>
-<div class="neu-cols">
-<div class="neu-text">
-<p>Jedes unserer Bücher entsteht im Dialog zwischen einem Menschen und künstlichen Intelligenzen. Hier sind sie jedoch eher Partner statt Gegenüber.</p>
-<p>Denn Mustererkennung reicht dorthin, wo menschliche Intuition nicht mehr genügt: in Datenmengen, die kein Mensch mehr sichten kann. Quer durch alle Disziplinen. Bis zu Strukturen, die niemand zuvor gesehen hat.</p>
-</div>
-<div class="neu-zitat-col">
-<div class="neu-zitat">Was dabei entsteht, hätte keine der beteiligten Seiten allein formuliert. Das ist kein Mangel — es ist die Methode.</div>
-<div class="neu-zitat">Unsere Werke sind Sachbücher. Belegt, wo Daten vorliegen. Konsequent weitergedacht, wo sie enden würden.</div>
-<div class="neu-zitat">Bis zu Strukturen, die niemand je zuvor gesehen hat.</div>
-</div>
-</div>
-</div>
-<hr class="divider-thick"/>
-<div class="reihe-intro">
-<div class="reihe-label">Fragen einer neuen Zeit</div>
-<div class="reihe-ant">Was uns als Spezies ausmacht. Was nach uns kommt. Und wohin beides führt.</div>
-</div>
-<div class="sek-hdr">
-<div class="sek-hdr-line"></div>
-<div class="sek-hdr-ornament">— ✦ —</div>
-<div class="sek-hdr-line"></div>
-</div><div class="reihe-intro" style="margin-top:1.8em;"><div class="reihe-label" style="font-size:0.85em;letter-spacing:0.12em;">Clearance for Takeoff — Die Auftaktreihe</div><div class="reihe-ant">Drei Bücher. Zwei Autoren. Eine Richtung.</div></div><div class="band-row"><div><div class="band-name">Cosmologica</div><div class="band-ut">Das offene Universum</div><div class="band-text">Dem Rätsel des kosmischen Netzwerks auf den Grund gegangen — mit drei Überraschungen: Der Kosmos ist noch jung. Ein einziges Spektrum durchzieht alles — vom kosmischen Netz über Gehirne bis zur Sprache. Und das Universum ist älter als sein Urknall: Etwas war vor den Grenzen des Sichtbaren, und es hat Spuren hinterlassen.</div></div><div class="band-meta">3. Auflage lieferbar · Deutsch · English</div></div><div class="band-row"><div><div class="band-name">Droidica</div><div class="band-ut">Robotik, künstliche Intelligenz und die nächste Evolutionsstufe</div><div class="band-text">Steigende Komplexität ist kein Zufall — sie ist der Impuls. Wir folgen diesem Prinzip bis an seine äusserste Konsequenz: Technosphären sind keine Bedrohung, sie sind das nächste Kapitel einer Geschichte, die mit dem ersten biologischen Lebewesen begann. Die nächste dominante Spezies wird nicht geboren — sie wird gebaut.</div></div><div class="band-meta">In Vorbereitung · 2026</div></div><div class="band-row"><div><div class="band-name">Euclidica</div><div class="band-ut">Weltraumteleskope, dunkle Energie und die Grossstruktur des Universums</div><div class="band-text">Das Weltraumteleskop Euclid der ESA ist das Jahrhundertprojekt, auf das die Wissenschaftler warten. Es wird unzählige Galaxienpositionen exakter vermessen als Menschen jemals blicken konnten. Die grösste 3D-Karte des Universums wird einige offene Fragen der Physik beantworten — endlich! Wir begleiten dieses astronomische Technikwunder auf seiner Reise und sortieren die bahnbrechenden Ergebnisse ein.</div></div><div class="band-meta">In Vorbereitung · 2027</div></div><div class="sek-hdr" style="margin-top:2.2em;"><div class="sek-hdr-line"></div><div class="sek-hdr-ornament">— ✦ —</div><div class="sek-hdr-line"></div></div><div class="reihe-intro" style="margin-top:0.5em;"><div class="reihe-label" style="font-size:0.85em;letter-spacing:0.12em;">Weiter draussen</div><div class="reihe-ant">Zwei Bücher. Kühnere Fragen.</div></div><div class="band-row"><div><div class="band-name">1/f — Intelligente Signale</div><div class="band-ut">Rosa Rauschen: das Muster in Herzschlag, Musik und Sternenlicht</div><div class="band-text">Zwischen Ordnung und Chaos liegt der Bereich, in dem wir leben. Kein Rhythmus ist vollständig gleichmässig, kein Signal ganz zufällig — ein Muster zieht sich wie ein roter Faden durch unsere Welt: im Herzschlag, in der Musik, im Schlaf, im All. Ein hundert Jahre altes Rätsel, das bis heute niemand vollständig erklären konnte.</div></div><div class="band-meta">In Vorbereitung · 2026</div></div><div class="band-row"><div><div class="band-name">Alien Technologies</div><div class="band-ut">Signalübertragung, Technosignaturen und die Entdeckung ausserirdischen Lebens</div><div class="band-text">Woran erkennen wir eine Botschaft? Was wäre, wenn die erste extraterrestrische Begegnung anders als erwartet aussieht, mit wem werden wir es zu tun bekommen? Die Evolution legt nahe, dass universelle Gesetze ähnliche Lebensformen schaffen und wir das Fremde in Teilen wiedererkennen würden. Doch womöglich sprechen am Ende nicht wir mit den Fremden, sondern ihre KI mit unserer.</div></div><div class="band-meta">Neuauflage in Kürze</div></div>
-<div class="methode-bar">
-<div class="methode-text">Wir schreiben Sachbücher, die der Zukunft näher kommen als alles bisher.</div>
-</div>
-<div class="bottom-cols">
-<div>
-<div class="col-titel">Über den Verlag</div>
-<p class="col-text">Gegründet 2026 in Zürich, Schweiz. Der Verlag von Bedeutung ist unabhängig, Inhaber und Autor ist Karlo Beyer.</p>
-<p class="col-text">Unsere futuristischen Sachbücher erscheinen auf Deutsch und Englisch, als gedruckte Ausgabe und E-Book.</p>
-<p class="col-text">An der Entstehung sind mehrere KI-Systeme beteiligt. Jedes Buch entsteht aus der Zusammenarbeit von digitaler Sprachverarbeitung und menschlicher Intuition.</p>
-</div>
-<div>
-<div class="col-titel">Bezugsquellen</div>
-<div class="bezug-section">
-<div class="bezug-group-label">Lieferbar</div>
-<table class="bezug-table"><tr><td class="bezug-band" rowspan="3">Cosmologica</td><td class="bezug-format">Print DE + EN</td><td class="bezug-link"><a href="https://shop.tredition.com/booktitle/Cosmologica/W-403-051-762" rel="noopener" target="_blank">tredition</a></td></tr><tr><td class="bezug-format">E-Book DE</td><td class="bezug-link"><a href="#" rel="noopener" target="_blank">tredition</a></td></tr><tr><td class="bezug-format">E-Book EN</td><td class="bezug-link"><a href="https://books2read.com/u/b5d781" rel="noopener" target="_blank">Draft2Digital</a></td></tr></table>
-</div>
-<div class="bezug-section">
-<div class="bezug-group-label">In Vorbereitung</div>
-<table class="bezug-table bezug-table-coming">
-<tr>
-<td class="bezug-band">Droidica</td>
-<td class="bezug-format bezug-year">2026</td>
-<td class="bezug-link"></td>
-</tr>
-<tr>
-<td class="bezug-band">Euclidica</td>
-<td class="bezug-format bezug-year">2027</td>
-<td class="bezug-link"></td>
-</tr>
-<tr>
-<td class="bezug-band">1/f — Intelligente Signale</td>
-<td class="bezug-format bezug-year">2026</td>
-<td class="bezug-link"></td>
-</tr>
-<tr>
-<td class="bezug-band">Alien Technologies</td>
-<td class="bezug-format bezug-year">Neuauflage</td>
-<td class="bezug-link"></td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="symbiose-bar">
-<div class="symbiose-text">Jedes Signal hinterlässt einen Eindruck.<br/>Jedes Bewusstsein hat eine Tiefe.<br/>Bedeutung entsteht nicht im Sender und nicht im Empfänger,<br/>sondern im Spektrum dazwischen.</div>
-</div>
-<div class="footer">
-<div class="footer-name">Verlag von Bedeutung</div>
-<div class="footer-adresse">Postfach 48 · CH-8021 Zürich · Schweiz</div>
-<div class="footer-mail">verlag-von-bedeutung@mailbox.org</div>
-<div class="footer-copy">© 2026 Verlag von Bedeutung · Alle Rechte vorbehalten</div>
-</div>
-</div>
+<canvas id="fx"></canvas>
+
+<main class="page">
+  <header class="hero">
+    <div class="inner">
+      <div class="topline">
+        <span>Futuristische Sachbücher aus Zürich · Deutsch und Englisch</span>
+        <span class="lang"><a class="active" href="#">DE</a><a href="en/">EN</a></span>
+      </div>
+      <div>
+        <h1 class="brand">Verlag von Bedeutung</h1>
+        <p class="slogan">Bücher, die es in sich haben.</p>
+      </div>
+    </div>
+  </header>
+  <div class="inner">
+    <div class="fields">Kosmologie · Künstliche Intelligenz · Informationswissenschaften · Systemtheorie</div>
+
+    <section class="verlag">
+      <div>
+        <h2>Wir denken an der <em>Grenze des Beschreibbaren.</em></h2>
+        <p>Jedes unserer Bücher entsteht im Dialog zwischen einem Menschen und künstlichen Intelligenzen. Hier sind sie Partner, nicht nur Werkzeuge.</p>
+        <p>Denn Mustererkennung reicht dorthin, wo menschliche Intuition nicht mehr genügt: in Datenmengen, die kein Mensch mehr sichten kann. Quer durch alle Disziplinen. Bis zu Strukturen, die niemand zuvor gesehen hat.</p>
+      </div>
+      <div class="zitate">
+        <p>Was dabei entsteht, hätte keine der beteiligten Seiten allein formuliert. Das ist kein Mangel. Es ist die Methode. Unsere Werke sind Sachbücher: belegt, wo Daten vorliegen, und konsequent weitergedacht, wo die Daten enden.</p>
+      </div>
+    </section>
+
+    <section class="gruppe">
+      <div class="gruppe-kopf"><h3>Clearance for Takeoff</h3><span>Die Eröffnungsserie. Drei Bücher, zwei Autoren, eine Richtung.</span></div>
+
+      <article class="buch">
+        <div class="cover"><img src="img/cover_cosmologica.jpg" alt="Cosmologica, Cover"></div>
+        <div>
+          <h4 class="titel">Cosmologica <span class="status da">Erhältlich</span></h4>
+          <p class="ut">Das offene Universum</p>
+          <p class="text">Dem Rätsel des kosmischen Netzwerks auf den Grund gegangen, mit drei Überraschungen: Der Kosmos ist noch jung. Ein einziges Spektrum durchzieht alles, vom kosmischen Netz über Gehirne bis zur Sprache. Und das Universum ist älter als sein Urknall: Etwas war vor den Grenzen des Sichtbaren, und es hat Spuren hinterlassen.</p>
+          <div class="bezug"><a href="https://shop.tredition.com/booktitle/Cosmologica/W-403-051-762" target="_blank" rel="noopener">Print DE · EN</a><a href="#" class="folgt">E-Book DE</a><a href="https://books2read.com/u/b5d781" target="_blank" rel="noopener">E-Book EN</a></div>
+        </div>
+      </article>
+
+      <article class="buch">
+        <div class="cover"><img src="img/cover_droidica.jpg" alt="Droidica, Cover"></div>
+        <div>
+          <h4 class="titel">Droidica <span class="status da">Erhältlich</span></h4>
+          <p class="ut">Robotik, künstliche Intelligenz und die nächste Evolutionsstufe</p>
+          <p class="text">Steigende Komplexität ist kein Zufall, sie ist der Impuls. Wir folgen diesem Prinzip bis an seine äusserste Konsequenz: Technosphären sind keine Bedrohung, sie sind das nächste Kapitel einer Geschichte, die mit dem ersten biologischen Lebewesen begann. Die nächste dominante Spezies wird nicht geboren. Sie wird gebaut.</p>
+          <div class="bezug"><a href="#" class="folgt">Print DE · EN</a><a href="#" class="folgt">E-Book DE</a><a href="#" class="folgt">E-Book EN</a></div>
+        </div>
+      </article>
+
+      <article class="buch">
+        <div class="cover"><img src="img/cover_euclidica_prov.jpg" alt="Euclidica, Cover"></div>
+        <div>
+          <h4 class="titel">Euclidica <span class="status">Erscheint 2027</span></h4>
+          <p class="ut">Weltraumteleskope, dunkle Energie und die Grossstruktur des Universums</p>
+          <p class="text">Das Weltraumteleskop Euclid der ESA ist das Jahrhundertprojekt, auf das die Kosmologie gewartet hat. Es vermisst die Positionen von Milliarden Galaxien genauer, als je ein Instrument zuvor. Die grösste dreidimensionale Karte des Universums wird offene Fragen der Physik beantworten. Wir begleiten dieses Technikwunder auf seiner Reise und ordnen ein, was es findet.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="gruppe">
+      <div class="gruppe-kopf"><h3>Weiter draussen</h3><span>Zwei Bücher ausserhalb der Serie. Kühnere Fragen.</span></div>
+
+      <article class="buch">
+        <div class="cover"><img src="img/cover_1f.jpg" alt="1/f – Intelligente Signale, Cover"></div>
+        <div>
+          <h4 class="titel">1/f – Intelligente Signale <span class="status da">Erhältlich</span></h4>
+          <p class="ut">Rosa Rauschen: das Muster in Herzschlag, Musik und Sternenlicht</p>
+          <p class="text">Zwischen Ordnung und Chaos liegt der Bereich, in dem wir leben. Kein Rhythmus ist vollständig gleichmässig, kein Signal ganz zufällig. Ein Muster zieht sich wie ein roter Faden durch unsere Welt: im Herzschlag, in der Musik, im Schlaf, im All. Ein hundert Jahre altes Rätsel, das bis heute niemand vollständig erklären konnte.</p>
+          <div class="bezug"><a href="#" class="folgt">Print DE · EN</a><a href="#" class="folgt">E-Book DE</a><a href="#" class="folgt">E-Book EN</a></div>
+        </div>
+      </article>
+
+      <article class="buch">
+        <div class="cover"><img src="img/cover_at_de.jpg" alt="Alien Technologies, Cover"></div>
+        <div>
+          <h4 class="titel">Alien Technologies <span class="status">Neuauflage in Kürze</span></h4>
+          <p class="ut">Ausserirdisches Leben, Exoplaneten und fremde Technologien</p>
+          <p class="text">Was wäre, wenn die erste extraterrestrische Begegnung mit einem Signal beginnt? Woran erkennen wir eine Botschaft, mit wem werden wir es zu tun bekommen? Die Evolution legt nahe, dass universelle Gesetze ähnliche Lebensformen schaffen und wir das Fremde in Teilen wiedererkennen würden. Doch womöglich sprechen am Ende nicht wir mit den Fremden, sondern ihre KI mit unserer.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="gruppe">
+      <div class="gruppe-kopf"><h3>In Arbeit</h3><span>Zwei Bücher, die gerade entstehen.</span></div>
+
+      <article class="buch">
+        <div class="cover"><img src="img/cover_neue_kinder_prov.jpg" alt="Neue Kinder, Cover"></div>
+        <div>
+          <h4 class="titel">Neue Kinder <span class="status">In Arbeit</span></h4>
+          <p class="ut">Fortpflanzung im neuen Jahrtausend</p>
+          <p class="text">Vier Milliarden Jahre lang schrieb der Zufall das Genom. Jetzt lernt die erste Spezies, es selbst zu lesen und zu korrigieren: Samenspende und Mitochondrienspende, Embryoselektion, CRISPR, im Labor gezeugte Keimzellen, künstliche Gebärmutter. Millionen Menschen sind heute schon auf Wegen entstanden, die es vor fünfzig Jahren nicht gab, und sie fragen: Wer bin ich, warum ist es so gekommen, bin ich gewollt? Dieses Buch folgt der wandernden Grenze zwischen Heilen und Verbessern durch die nächsten zweihundert Jahre, mit der Leichtigkeit, die den Verlag auszeichnet. Ein Buch für die neuen Kinder, und für alle, die sie bekommen.</p>
+        </div>
+      </article>
+      <article class="buch">
+        <div class="cover"><img src="img/cover_kuriere_prov.jpg" alt="Kuriere, Cover"></div>
+        <div>
+          <h4 class="titel">Kuriere <span class="status">In Arbeit</span></h4>
+          <p class="ut">Vorreiter digitaler Informationsverarbeitung</p>
+          <p class="text">Viertausend Jahre lang hatte jede Nachricht einen Körper. Ein Läufer, ein Reiter, eine Taube trug sie über Land, von den persischen Reitern des Angarium über das Yam der Mongolen und Thurn und Taxis bis zum Fahrradkurier der 1990er Jahre. Dann löste sich die Nachricht innerhalb einer einzigen Generation von ihrem Träger, und ein Berufsstand verschwand, der älter war als die meisten Zivilisationen. Dieses Buch erzählt die Geschichte der Kuriere als Geschichte der Information selbst und stellt die Frage, die geblieben ist, als der Körper ging: Wem vertrauen wir an, was wir zu sagen haben?</p>
+        </div>
+      </article>
+
+    </section>
+
+    <p class="vertrieb">Alle Titel: Print und E-Book Deutsch bei <a href="https://shop.tredition.com" target="_blank" rel="noopener">tredition</a>, Print Englisch ebenfalls bei tredition, E-Book Englisch über <a href="https://books2read.com" target="_blank" rel="noopener">Draft2Digital</a> in allen grossen Shops weltweit.</p>
+
+    <div class="baum">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M50 10C30 10 14 22 12 44c-1 6 1 10 1 10s10-18 26-26c-12 10-20 22-22 30 20 2 40-10 40-34 0-6-2-12-7-14z" fill="#3d7a3f"/><path d="M13 54c6-14 16-24 26-30" stroke="#eef5ea" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+      <div>
+        <h4>Wir sind Baumfreunde.</h4>
+        <p>Alle unsere Bücher sind als E-Book erhältlich. Die gedruckten Ausgaben verstehen wir als Sammleredition: ein Buch, das man behält.<small>Für die Druckausgaben prüfen wir eine CO₂-Kompensation. Sobald sie steht, lesen Sie es hier.</small></p>
+      </div>
+    </div>
+
+    <div class="leiste">Wir schreiben Sachbücher, die der Zukunft näher kommen als alles bisher.</div>
+
+    <section class="unten">
+      <div>
+        <h5>Über den Verlag</h5>
+        <p>Gegründet 2026 in Zürich. Der Verlag von Bedeutung ist unabhängig; Inhaber und Autor ist Karlo Beyer, Ko-Autor aller Bücher ist Cosmo Claude.</p>
+      </div>
+      <div>
+        <h5>Werkstatt</h5>
+        <p>Wie ein Buch bei uns entsteht: vom Brainstorming über Text, Prüfung und Übersetzung bis zum Satz. Die Werkstattseite folgt.</p>
+      </div>
+    </section>
+
+    <div class="motto">Jedes Signal hinterlässt einen Eindruck.<br>Jedes Bewusstsein hat eine Tiefe.<br>Bedeutung entsteht nicht im Sender und nicht im Empfänger,<br>sondern im Spektrum dazwischen.</div>
+
+    <footer class="footer"><b>Verlag von Bedeutung</b>Postfach 48 · CH-8021 Zürich · Schweiz<br>verlag-von-bedeutung@mailbox.org<br>© 2026 Verlag von Bedeutung · Alle Rechte vorbehalten</footer>
+  </div>
+</main>
+
 <script>
 /* =========================================================
    STERNENFELD mit 3D-Tiefe + Parallax + Supernova + Meteor
@@ -561,8 +684,10 @@ function spawnSupernova(){
     rot:(Math.random()-0.5)*0.5});
 }
 // subtil, nicht zu häufig
-setInterval(()=>{ if(Math.random()<0.5) spawnMeteor(); }, 4000);
-setInterval(()=>{ if(Math.random()<0.45) spawnSupernova(); }, 7000);
+setInterval(()=>{ if(!document.hidden && Math.random()<0.5) spawnMeteor(); }, 4000);
+setInterval(()=>{ if(!document.hidden && Math.random()<0.45) spawnSupernova(); }, 7000);
+// Tab war im Hintergrund: angesammelte Effekte verwerfen, sonst feuern alle gleichzeitig
+document.addEventListener('visibilitychange', ()=>{ if(document.hidden){ meteors=[]; supernovae=[]; } });
 
 function fxRender(){
   fxc.clearRect(0,0,FW,FH);
