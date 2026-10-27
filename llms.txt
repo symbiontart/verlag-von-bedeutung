@@ -13,7 +13,7 @@ Themen / Topics: Kosmologie, künstliche Intelligenz, Informationswissenschaften
 
 ## Ausserhalb der Serie / Outside the series
 - **1/f — Intelligente Signale / Signal Intelligence** (Rosa Rauschen / pink noise) · erhältlich / available.
-- **Alien Technologies — Ausserirdisches Leben, Exoplaneten und fremde Technologien / Extraterrestrial life, exoplanets, and alien technologies** · Neuauflage in Kürze / new edition soon.
+- **Alien Technologies — Ausserirdisches Leben, Exoplaneten und fremde Technologien / Extraterrestrial life, exoplanets, and alien technologies** · erhältlich / available.
 
 ## In Arbeit / In the making
 - **Neue Kinder — Fortpflanzung im neuen Jahrtausend / New Children — Reproduction in the new millennium**
@@ -25,5 +25,7 @@ Print und E-Book Deutsch sowie Print Englisch bei tredition (shop.tredition.com)
 ## Seiten / Pages
 - https://symbiontart.github.io/verlag-von-bedeutung/ (DE)
 - https://symbiontart.github.io/verlag-von-bedeutung/en/ (EN)
+- https://symbiontart.github.io/verlag-von-bedeutung/autoren.html (Autorenseite, DE: Karlo Beyer, Cosmo Claude, Arbeitsweise, Verantwortung)
+- https://symbiontart.github.io/verlag-von-bedeutung/en/authors.html (author page, EN)
 
 Kontakt / Contact: verlag-von-bedeutung@mailbox.org · Postfach 48, CH-8021 Zürich
