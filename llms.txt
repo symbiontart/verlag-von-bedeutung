@@ -28,5 +28,7 @@ Print und E-Book Deutsch sowie Print Englisch bei tredition (shop.tredition.com)
 - https://symbiontart.github.io/verlag-von-bedeutung/autoren.html (Autorenseite, DE: Karlo Beyer, Cosmo Claude, Arbeitsweise, Verantwortung)
 - https://symbiontart.github.io/verlag-von-bedeutung/en/authors.html (author page, EN)
 - https://symbiontart.github.io/verlag-von-bedeutung/alien-technologies.html (Buchseite DE, mit Leseprobe) · https://symbiontart.github.io/verlag-von-bedeutung/en/alien-technologies.html (book page EN, with reading sample)
+- https://symbiontart.github.io/verlag-von-bedeutung/droidica.html (Buchseite DE, mit Leseprobe) · https://symbiontart.github.io/verlag-von-bedeutung/en/droidica.html (book page EN, with reading sample)
+- Buchseiten in Arbeit / pages for books in the making: https://symbiontart.github.io/verlag-von-bedeutung/euclidica.html · https://symbiontart.github.io/verlag-von-bedeutung/neue-kinder.html · https://symbiontart.github.io/verlag-von-bedeutung/kuriere.html (EN: /en/ + same filename)
 
 Kontakt / Contact: verlag-von-bedeutung@mailbox.org · Postfach 48, CH-8021 Zürich

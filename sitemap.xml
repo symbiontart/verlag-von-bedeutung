@@ -55,4 +55,76 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://symbiontart.github.io/verlag-von-bedeutung/en/alien-technologies.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://symbiontart.github.io/verlag-von-bedeutung/alien-technologies.html" />
   </url>
+  <url>
+    <loc>https://symbiontart.github.io/verlag-von-bedeutung/droidica.html</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://symbiontart.github.io/verlag-von-bedeutung/droidica.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbiontart.github.io/verlag-von-bedeutung/en/droidica.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbiontart.github.io/verlag-von-bedeutung/droidica.html" />
+  </url>
+  <url>
+    <loc>https://symbiontart.github.io/verlag-von-bedeutung/en/droidica.html</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://symbiontart.github.io/verlag-von-bedeutung/droidica.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbiontart.github.io/verlag-von-bedeutung/en/droidica.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbiontart.github.io/verlag-von-bedeutung/droidica.html" />
+  </url>
+  <url>
+    <loc>https://symbiontart.github.io/verlag-von-bedeutung/euclidica.html</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://symbiontart.github.io/verlag-von-bedeutung/euclidica.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbiontart.github.io/verlag-von-bedeutung/en/euclidica.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbiontart.github.io/verlag-von-bedeutung/euclidica.html" />
+  </url>
+  <url>
+    <loc>https://symbiontart.github.io/verlag-von-bedeutung/en/euclidica.html</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://symbiontart.github.io/verlag-von-bedeutung/euclidica.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbiontart.github.io/verlag-von-bedeutung/en/euclidica.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbiontart.github.io/verlag-von-bedeutung/euclidica.html" />
+  </url>
+  <url>
+    <loc>https://symbiontart.github.io/verlag-von-bedeutung/neue-kinder.html</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://symbiontart.github.io/verlag-von-bedeutung/neue-kinder.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbiontart.github.io/verlag-von-bedeutung/en/neue-kinder.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbiontart.github.io/verlag-von-bedeutung/neue-kinder.html" />
+  </url>
+  <url>
+    <loc>https://symbiontart.github.io/verlag-von-bedeutung/en/neue-kinder.html</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://symbiontart.github.io/verlag-von-bedeutung/neue-kinder.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbiontart.github.io/verlag-von-bedeutung/en/neue-kinder.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbiontart.github.io/verlag-von-bedeutung/neue-kinder.html" />
+  </url>
+  <url>
+    <loc>https://symbiontart.github.io/verlag-von-bedeutung/kuriere.html</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://symbiontart.github.io/verlag-von-bedeutung/kuriere.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbiontart.github.io/verlag-von-bedeutung/en/kuriere.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbiontart.github.io/verlag-von-bedeutung/kuriere.html" />
+  </url>
+  <url>
+    <loc>https://symbiontart.github.io/verlag-von-bedeutung/en/kuriere.html</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://symbiontart.github.io/verlag-von-bedeutung/kuriere.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbiontart.github.io/verlag-von-bedeutung/en/kuriere.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbiontart.github.io/verlag-von-bedeutung/kuriere.html" />
+  </url>
 </urlset>
