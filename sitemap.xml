@@ -37,4 +37,22 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://symbiontart.github.io/verlag-von-bedeutung/en/authors.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://symbiontart.github.io/verlag-von-bedeutung/autoren.html" />
   </url>
+  <url>
+    <loc>https://symbiontart.github.io/verlag-von-bedeutung/alien-technologies.html</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://symbiontart.github.io/verlag-von-bedeutung/alien-technologies.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbiontart.github.io/verlag-von-bedeutung/en/alien-technologies.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbiontart.github.io/verlag-von-bedeutung/alien-technologies.html" />
+  </url>
+  <url>
+    <loc>https://symbiontart.github.io/verlag-von-bedeutung/en/alien-technologies.html</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://symbiontart.github.io/verlag-von-bedeutung/alien-technologies.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbiontart.github.io/verlag-von-bedeutung/en/alien-technologies.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbiontart.github.io/verlag-von-bedeutung/alien-technologies.html" />
+  </url>
 </urlset>
