@@ -127,4 +127,58 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://symbiontart.github.io/verlag-von-bedeutung/en/kuriere.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://symbiontart.github.io/verlag-von-bedeutung/kuriere.html" />
   </url>
+  <url>
+    <loc>https://symbiontart.github.io/verlag-von-bedeutung/cosmologica.html</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://symbiontart.github.io/verlag-von-bedeutung/cosmologica.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbiontart.github.io/verlag-von-bedeutung/en/cosmologica.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbiontart.github.io/verlag-von-bedeutung/cosmologica.html" />
+  </url>
+  <url>
+    <loc>https://symbiontart.github.io/verlag-von-bedeutung/en/cosmologica.html</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://symbiontart.github.io/verlag-von-bedeutung/cosmologica.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbiontart.github.io/verlag-von-bedeutung/en/cosmologica.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbiontart.github.io/verlag-von-bedeutung/cosmologica.html" />
+  </url>
+  <url>
+    <loc>https://symbiontart.github.io/verlag-von-bedeutung/1f.html</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://symbiontart.github.io/verlag-von-bedeutung/1f.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbiontart.github.io/verlag-von-bedeutung/en/1f.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbiontart.github.io/verlag-von-bedeutung/1f.html" />
+  </url>
+  <url>
+    <loc>https://symbiontart.github.io/verlag-von-bedeutung/en/1f.html</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://symbiontart.github.io/verlag-von-bedeutung/1f.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbiontart.github.io/verlag-von-bedeutung/en/1f.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbiontart.github.io/verlag-von-bedeutung/1f.html" />
+  </url>
+  <url>
+    <loc>https://symbiontart.github.io/verlag-von-bedeutung/das-achte-buch.html</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://symbiontart.github.io/verlag-von-bedeutung/das-achte-buch.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbiontart.github.io/verlag-von-bedeutung/en/das-achte-buch.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbiontart.github.io/verlag-von-bedeutung/das-achte-buch.html" />
+  </url>
+  <url>
+    <loc>https://symbiontart.github.io/verlag-von-bedeutung/en/das-achte-buch.html</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://symbiontart.github.io/verlag-von-bedeutung/das-achte-buch.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbiontart.github.io/verlag-von-bedeutung/en/das-achte-buch.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbiontart.github.io/verlag-von-bedeutung/das-achte-buch.html" />
+  </url>
 </urlset>
