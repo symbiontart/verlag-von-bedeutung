@@ -6,6 +6,8 @@ Live: https://symbiontart.github.io/verlag-von-bedeutung/ (DE) · /en/ (EN)
 ## Aufbau
 - `index.html` – deutsche Seite (eine Datei, Stil und Skript eingebettet)
 - `en/index.html` – englische Seite, gespiegelt
+- `impressum.html`, `en/legal.html` – Impressum und Datenschutzerklärung (DE/EN); Footer-Link auf allen Seiten
+- `fonts/` – Merriweather und Inter selbst gehostet (SIL OFL), kein Google Fonts
 - `img/` – Cover, Hero-Band, Favicon
 - `og-image.jpg` – Vorschaubild beim Teilen
 - `sitemap.xml`, `robots.txt`, `llms.txt` – Suchmaschinen und KI-Crawler

@@ -181,4 +181,22 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://symbiontart.github.io/verlag-von-bedeutung/en/das-achte-buch.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://symbiontart.github.io/verlag-von-bedeutung/das-achte-buch.html" />
   </url>
+  <url>
+    <loc>https://symbiontart.github.io/verlag-von-bedeutung/impressum.html</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://symbiontart.github.io/verlag-von-bedeutung/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbiontart.github.io/verlag-von-bedeutung/en/legal.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbiontart.github.io/verlag-von-bedeutung/impressum.html" />
+  </url>
+  <url>
+    <loc>https://symbiontart.github.io/verlag-von-bedeutung/en/legal.html</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://symbiontart.github.io/verlag-von-bedeutung/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://symbiontart.github.io/verlag-von-bedeutung/en/legal.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://symbiontart.github.io/verlag-von-bedeutung/impressum.html" />
+  </url>
 </urlset>
