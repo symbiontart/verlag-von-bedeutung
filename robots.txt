@@ -1,5 +1,5 @@
 # robots.txt — Verlag von Bedeutung
-# symbiontart.github.io/verlag-von-bedeutung/
+# verlagvonbedeutung.com/
 # Alle Suchmaschinen und KI-Crawler sind ausdruecklich willkommen.
 
 User-agent: *
@@ -58,4 +58,4 @@ Allow: /
 User-agent: meta-externalagent
 Allow: /
 
-Sitemap: https://symbiontart.github.io/verlag-von-bedeutung/sitemap.xml
+Sitemap: https://verlagvonbedeutung.com/sitemap.xml

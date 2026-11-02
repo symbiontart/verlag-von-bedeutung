@@ -1,7 +1,7 @@
 # Verlag von Bedeutung
 
 Website des Verlags von Bedeutung, Zürich: futuristische Sachbücher in Deutsch und Englisch.
-Live: https://symbiontart.github.io/verlag-von-bedeutung/ (DE) · /en/ (EN)
+Live: https://verlagvonbedeutung.com/ (DE) · /en/ (EN)
 
 ## Aufbau
 - `index.html` – deutsche Seite (eine Datei, Stil und Skript eingebettet)
