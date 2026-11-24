@@ -9,7 +9,7 @@ Themen / Topics: Kosmologie, künstliche Intelligenz, Informationswissenschaften
 ## Eröffnungsserie «Clearance for Takeoff» / Opening series
 - **Cosmologica — Das offene Universum / The Open Universe** · erhältlich / available (DE, EN; Print, E-Book). ISBN Print DE 978-3-384-98143-1, E-Book DE 978-3-384-98156-1, Print EN 978-3-384-98602-3, E-Book EN 979-8-233-99128-8.
 - **Droidica — Robotik, künstliche Intelligenz und die nächste Evolutionsstufe / Robotics, artificial intelligence and the next stage of evolution** · erhältlich / available.
-- **Euclidica — Weltraumteleskope, dunkle Energie und die Grossstruktur des Universums / Space telescopes, dark energy and the large-scale structure of the universe** · in Arbeit / in the making.
+- **Euclidica — Weltraumteleskope, dunkle Energie und die Grossstruktur des Universums / Space telescopes, dark energy and the large-scale structure of the universe** (Untertitel im Buch / subtitle in the book: Die Vermessung des dunklen Universums / Mapping the Dark Universe) · erhältlich / available (November 2026). ISBN Print EN 978-3-567-07674-9, E-Book EN 979-8-2379-5278-0, Kindle EN ASIN B0HSNPTKV6; Print DE 978-3-567-07664-0, E-Book DE 978-3-567-07665-7. Print EN: https://shop.tredition.com/booktitle/Euclidica/W-412-025-291
 
 ## Ausserhalb der Serie / Outside the series
 - **1/f — Intelligente Signale / Signal Intelligence** (Rosa Rauschen / pink noise) · erhältlich / available.
@@ -33,6 +33,7 @@ Unsere Ausgaben sind lebende Bücher: Sie werden in unregelmässigen Abständen 
 - https://verlagvonbedeutung.com/droidica.html (Buchseite DE, mit Leseprobe) · https://verlagvonbedeutung.com/en/droidica.html (book page EN, with reading sample)
 - https://verlagvonbedeutung.com/neue-kinder.html (Buchseite DE, mit Leseprobe) · https://verlagvonbedeutung.com/en/neue-kinder.html (book page EN, with reading sample)
 - https://verlagvonbedeutung.com/cosmologica.html · https://verlagvonbedeutung.com/1f.html (Buchseiten DE, mit Leseprobe; EN: /en/ + gleicher Dateiname / book pages with reading samples)
-- Buchseiten in Arbeit / pages for books in the making: https://verlagvonbedeutung.com/euclidica.html · https://verlagvonbedeutung.com/kuriere.html · https://verlagvonbedeutung.com/das-achte-buch.html (EN: /en/ + same filename)
+- https://verlagvonbedeutung.com/euclidica.html (Buchseite DE) · https://verlagvonbedeutung.com/en/euclidica.html (book page EN)
+- Buchseiten in Arbeit / pages for books in the making: https://verlagvonbedeutung.com/kuriere.html · https://verlagvonbedeutung.com/das-achte-buch.html (EN: /en/ + same filename)
 
 Kontakt / Contact: verlag-von-bedeutung@mailbox.org · Postfach 48, CH-8021 Zürich
